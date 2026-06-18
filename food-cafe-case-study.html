@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickBite Food Delivery App — Case Study — Pasindu Madhushanka</title>
+<meta name="description" content="How a fast two-week UX sprint simplified ordering and payments in a food delivery app, easing checkout drop-off and order mix-ups for restaurant partners.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-veil" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-avatar"><img src="profile-placeholder.svg" alt="Pasindu Madhushanka"></span>
+      Pasindu&nbsp;Madhushanka
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-outline btn-sm" href="index.html#contact" data-cursor="Talk">Let's talk</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mono-tag">Menu — 01 / 04</span>
+  <a href="index.html#work">Work</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#contact">Contact</a>
+  <a class="btn btn-primary mobile-cta" href="index.html#contact">Start a project</a>
+</div>
+
+<main id="main">
+
+  <section class="case-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+        <a href="index.html">Home</a><span>/</span>
+        <a href="index.html#work">Work</a><span>/</span>
+        <span class="current">QuickBite Food Delivery</span>
+      </nav>
+
+      <div class="case-tags" data-reveal data-delay="80">
+        <span class="tag-pill">Food &amp; Delivery</span>
+        <span class="tag-pill">Mobile App</span>
+        <span class="tag-pill">2025</span>
+      </div>
+
+      <h1 data-reveal data-delay="140">QuickBite — making food delivery feel less like a chore</h1>
+      <p class="sub" data-reveal data-delay="200">A fast, research-driven UX sprint that simplified ordering and payments for customers, and cleaned up order handoff for restaurant partners.</p>
+
+      <div class="meta-grid" data-reveal data-delay="240">
+        <div class="meta-item"><div class="label">Client</div><div class="value">QuickBite (concept)</div></div>
+        <div class="meta-item"><div class="label">Role</div><div class="value">UX/UI Designer &amp; Researcher</div></div>
+        <div class="meta-item"><div class="label">Timeline</div><div class="value">2 weeks</div></div>
+        <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, Maze, Notion</div></div>
+      </div>
+
+      <div class="case-cover" data-reveal data-delay="100">
+        <div class="hero-canvas">
+          <div class="phone-mock">
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>●●● 100%</span></div>
+              <div class="balance-card">
+                <div class="b-label">Delivering to</div>
+                <div class="b-amount" style="font-size:1.05rem;">221 Galle Road</div>
+              </div>
+              <div class="phone-list">
+                <div class="phone-row"><div class="ic amber"></div><div class="ln"><div class="l1"></div><div class="l2"></div></div></div>
+                <div class="phone-row"><div class="ic"></div><div class="ln"><div class="l1"></div><div class="l2"></div></div></div>
+                <div class="phone-row"><div class="ic"></div><div class="ln"><div class="l1"></div><div class="l2"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <span class="spec-chip chip-1">Delivery address</span>
+          <span class="spec-chip chip-2">Checkout — 1 tap</span>
+          <span class="spec-chip chip-3"><span class="swatch" style="background:var(--cobalt)"></span>#2A33E0</span>
+          <span class="spec-chip chip-4">8px grid</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-body">
+      <nav class="case-nav" aria-label="Section navigation">
+        <span class="mono-tag">On this page</span>
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#process-cs">Process</a>
+        <a href="#solution">Solution</a>
+        <a href="#result">Result</a>
+      </nav>
+
+      <div class="case-content">
+
+        <section id="overview" data-reveal>
+          <p class="mono-tag">Overview</p>
+          <h2>Where the brief started — and where it actually went</h2>
+          <p>QuickBite already had solid restaurant partnerships and steady order volume — the problem was everything in between. Customers stalled out browsing menus, customising orders and paying, all crammed onto screens trying to do too much at once. Restaurant partners, on the other side, were misreading order customisations almost as often as they filled them correctly. The brief became a focused two-week sprint: find where the friction actually was, then fix the handful of screens responsible for most of it.</p>
+        </section>
+
+        <section id="problem" data-reveal>
+          <p class="mono-tag">Problem</p>
+          <h2>Research and support patterns pointed to the same three issues</h2>
+          <div class="pain-grid">
+            <div class="pain-card"><span class="num">01</span><p>Crowded ordering screens — menu browsing, customisation and checkout all competed for the same screen, slowing every order down.</p></div>
+            <div class="pain-card"><span class="num">02</span><p>Thin payment options — a narrow set of payment methods pushed price-sensitive customers to abandon their cart before paying.</p></div>
+            <div class="pain-card"><span class="num">03</span><p>Misread orders — customisation notes reached restaurant partners as plain text, easy to misread under rush-hour pressure.</p></div>
+          </div>
+        </section>
+
+        <section id="process-cs" data-reveal>
+          <p class="mono-tag">Process</p>
+          <h2>Four stages, packed into two weeks</h2>
+          <div class="timeline">
+            <div class="step" data-reveal>
+              <span class="step-num">01 — Research</span>
+              <h4>Talk to both sides</h4>
+              <p>Surveys and interviews with frequent customers and restaurant partners surfaced where each group actually got stuck.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">02 — Define</span>
+              <h4>Map it visually</h4>
+              <p>An empathy map and affinity diagram grouped the findings into a short list of problems worth solving first.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">03 — Design</span>
+              <h4>Sketch the real flows</h4>
+              <p>Personas and user flows guided new wireframes for browsing, customising and checkout before any visual polish.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">04 — Test</span>
+              <h4>Watch people order</h4>
+              <p>A moderated usability study on the new flow shaped the final design system and interface.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="solution" data-reveal>
+          <p class="mono-tag">Solution</p>
+          <h2>Three changes did most of the work</h2>
+
+          <div class="feature-row">
+            <div class="feature-copy">
+              <span class="num">01</span>
+              <h3>Ordering split into clear steps</h3>
+              <p>Browsing, customising and paying became three distinct steps instead of one crowded screen, with a one-tap reorder shortcut for regulars.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-bar"></div>
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-btn"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row is-rev">
+            <div class="feature-copy">
+              <span class="num">02</span>
+              <h3>More ways to pay</h3>
+              <p>Added several payment methods and digital wallets, so customers were no longer stuck at checkout with one inconvenient option.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-row"><div class="mock-chart"><i style="height:30%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i></div></div>
+                <div class="mock-line w-60" style="margin-top:18px;"></div>
+                <div class="mock-line w-40"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-copy">
+              <span class="num">03</span>
+              <h3>Order summaries partners can't misread</h3>
+              <p>Customisation details now reach the restaurant side as a structured, itemised summary instead of free text — no more guessing what a scribbled note meant.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-40"></div>
+                <div class="mock-btn" style="margin-top:24px; width:60%;"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="result" data-reveal>
+          <p class="mono-tag">Result</p>
+          <h2>What changed after testing</h2>
+          <div class="result-stats">
+            <div class="result-stat"><strong data-count="27" data-suffix="%">0</strong><span>Drop in checkout abandonment after adding more payment options</span></div>
+            <div class="result-stat"><strong data-count="4.5" data-suffix=" / 5">0</strong><span>Average usability score in testing, up from 3.3</span></div>
+            <div class="result-stat"><strong data-count="19" data-suffix="%">0</strong><span>Increase in repeat orders within the first month</span></div>
+          </div>
+        </section>
+
+        <a class="next-project" href="index.html#work" data-reveal>
+          <div>
+            <span class="mono-tag label">Back to selected work</span>
+            <span class="title">Explore more projects</span>
+          </div>
+          <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-banner" data-reveal>
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="inner">
+          <p class="eyebrow" style="color:var(--on-dark-dim);"><span class="dot"></span>Got a product that needs clarity?</p>
+          <h2>Let's make the next version the right one.</h2>
+          <p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p>
+          <div class="cta-actions">
+            <a class="btn btn-on-dark magnetic" href="mailto:hello@yourname.design" data-cursor="Email">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="cta-email" href="mailto:hello@yourname.design">hello@yourname.design</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="dot"></span>Pasindu&nbsp;Madhushanka</a>
+        <p>Product &amp; UX design, built with intention.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>Colombo, Sri Lanka</p>
+          <a href="mailto:hello@yourname.design">hello@yourname.design</a>
+          <a href="tel:+94757676542">+94 75 767 6542</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Dribbble" data-cursor="Dribbble">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9.5c2.8 1 8 1.4 16 .5M3.5 15c5-1.4 11.5-1.6 17 1M9 3.5c2.6 4 4.2 9.5 4.5 17"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" data-cursor="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" data-cursor="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pasindu Madhushanka. All rights reserved.</span>
+      <span>Designed &amp; coded by hand — no template.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
