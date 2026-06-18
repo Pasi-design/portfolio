@@ -19,7 +19,7 @@
 
 <header class="site-header">
   <div class="container nav-inner">
-    <a class="logo" href="index.html"><span class="dot"></span>Pasindu&nbsp;Madhushanka</a>
+    <a class="logo" href="index.html"><span class="dot"></span>Your&nbsp;Name</a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#work" class="is-active">Work</a>
       <a href="#about">About</a>
@@ -50,9 +50,16 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
+        <!-- Replace profile-placeholder.svg below with your own photo (e.g. src="profile.jpg") -->
+        <div class="hero-avatar-row" data-reveal>
+          <span class="hero-avatar">
+            <img src="profile-placeholder.svg" alt="Portrait of Your Name" width="60" height="60">
+          </span>
+          <strong class="hero-avatar-name">Your Name</strong>
+        </div>
         <p class="eyebrow" data-reveal><span class="dot"></span>UI / UX Designer — Colombo, Sri Lanka</p>
         <h1 class="hero-title" data-reveal data-delay="80">Designing <em>clarity</em><br>into complex products.</h1>
-        <p class="hero-sub" data-reveal data-delay="160">I'm Pasindu Madhushanka, a UX/UI designer who turns tangled flows into interfaces people actually enjoy using — from the first wireframe to the shipped screen.</p>
+        <p class="hero-sub" data-reveal data-delay="160">I'm Your Name, a product designer who turns tangled flows into interfaces people actually enjoy using — from the first wireframe to the shipped screen.</p>
         <div class="hero-actions" data-reveal data-delay="240">
           <a class="btn btn-primary magnetic" href="#work" data-cursor="Scroll">
             View my work
@@ -182,6 +189,95 @@
     </div>
   </section>
 
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-foot" data-reveal>
+        <div class="section-head">
+          <p class="eyebrow"><span class="dot"></span>Gallery</p>
+          <h2>A closer look at the pixels</h2>
+          <p>Small interface details say as much about a product as the big flows do. A few favourites, zoomed in.</p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card" data-reveal>
+          <div class="gallery-visual">
+            <div class="g-stepper"><span class="g-dot is-on"></span><span class="g-dot"></span><span class="g-dot"></span></div>
+            <div class="mock-line w-80" style="margin-top:20px;"></div>
+            <div class="mock-line w-60"></div>
+            <div class="mock-btn" style="margin-top:22px;"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Onboarding</span>
+            <p>Nimbus Banking App</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-reveal data-delay="80">
+          <div class="gallery-visual">
+            <div class="g-icon"></div>
+            <div class="mock-line w-60" style="margin-top:18px;"></div>
+            <div class="mock-line w-40"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Empty state</span>
+            <p>Loop Health</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-reveal data-delay="160">
+          <div class="gallery-visual">
+            <div class="g-row"><div class="mock-line w-40" style="margin:0;"></div><span class="g-toggle is-on"></span></div>
+            <div class="g-row"><div class="mock-line w-60" style="margin:0;"></div><span class="g-toggle"></span></div>
+            <div class="g-row"><div class="mock-line w-40" style="margin:0;"></div><span class="g-toggle is-on"></span></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Preferences</span>
+            <p>Atlas Analytics</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-reveal>
+          <div class="gallery-visual">
+            <div class="phone-row" style="width:100%;">
+              <div class="ic amber"></div>
+              <div class="ln"><div class="l1"></div><div class="l2"></div></div>
+            </div>
+            <span class="g-time">2m</span>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Order update</span>
+            <p>Fernwood Market</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-reveal data-delay="80">
+          <div class="gallery-visual">
+            <div class="mock-row" style="width:100%;"><div class="mock-chart"><i style="height:35%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:65%"></i></div></div>
+            <div class="g-legend"><span style="--lc:var(--cobalt)">Plan A</span><span style="--lc:var(--amber)">Plan B</span></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Spend breakdown</span>
+            <p>Atlas Analytics</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-reveal data-delay="160">
+          <div class="gallery-visual">
+            <div class="g-row"><span class="mono-tag">Subtotal</span><div class="mock-line w-40" style="margin:0;"></div></div>
+            <div class="g-row"><span class="mono-tag">Shipping</span><div class="mock-line w-40" style="margin:0;"></div></div>
+            <div class="mock-btn" style="margin-top:18px; width:55%;"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="mono-tag">Checkout</span>
+            <p>Fernwood Market</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT + PROCESS -->
   <section class="section" id="about">
     <div class="container about-grid">
@@ -226,6 +322,48 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="dot"></span>Experience</p>
+        <h2>Where I've worked</h2>
+        <p>Four years, three teams, one thread running through all of it — making confusing products easier to use.</p>
+      </div>
+
+      <div class="experience-list" data-reveal data-delay="100">
+        <div class="experience-item">
+          <div class="experience-when">2024 — Present</div>
+          <div class="experience-main">
+            <h3>Senior Product Designer <span class="exp-company">— Brightloom Studio</span></h3>
+            <p>Leading end-to-end design for two B2B SaaS clients, from early discovery through to a shared design system both teams now build on.</p>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-when">2022 — 2024</div>
+          <div class="experience-main">
+            <h3>Product Designer <span class="exp-company">— Seedwell Tech</span></h3>
+            <p>Owned the core onboarding and billing flows for a fintech product, partnering closely with engineering on every release.</p>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-when">2021 — 2022</div>
+          <div class="experience-main">
+            <h3>UI/UX Designer <span class="exp-company">— Northbridge Digital</span></h3>
+            <p>Designed across six client projects in an agency setting, moving fast between research, wireframes and polished UI.</p>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-when">2020 — 2021</div>
+          <div class="experience-main">
+            <h3>Freelance Product Designer <span class="exp-company">— Self-employed</span></h3>
+            <p>Took on early-stage startups and small businesses, learning to scope, price and deliver design work solo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SKILLS -->
   <section class="section section--tight">
     <div class="container">
@@ -245,6 +383,10 @@
         <span class="skill-pill">HTML &amp; CSS</span>
         <span class="skill-pill">Design Systems</span>
         <span class="skill-pill">Accessibility (WCAG)</span>
+        <span class="skill-pill">WordPress</span>
+        <span class="skill-pill">Claude AI</span>
+        <span class="skill-pill">ChatGPT</span>
+        <span class="skill-pill">Canva</span>
       </div>
     </div>
   </section>
@@ -282,6 +424,24 @@
     </div>
   </section>
 
+  <!-- BRANDS -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head" style="margin:0 auto; text-align:center;" data-reveal>
+        <p class="eyebrow" style="justify-content:center;"><span class="dot"></span>Trusted by</p>
+        <h2>Brands I've worked with</h2>
+      </div>
+      <div class="brand-wall" data-reveal data-delay="100">
+        <span class="brand-logo">Nimbus</span>
+        <span class="brand-logo">Atlas Analytics</span>
+        <span class="brand-logo">Loop Health</span>
+        <span class="brand-logo">Fernwood</span>
+        <span class="brand-logo">Brightloom</span>
+        <span class="brand-logo">Seedwell</span>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="section section--tight" id="contact">
     <div class="container">
@@ -309,7 +469,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo" href="index.html"><span class="dot"></span>Pasindu&nbsp;Madhushanka</a>
+        <a class="logo" href="index.html"><span class="dot"></span>Your&nbsp;Name</a>
         <p>Product &amp; UX design, built with intention.</p>
       </div>
       <div class="footer-cols">
@@ -342,7 +502,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Pasindu Madhushanka. All rights reserved.</span>
+      <span>© 2026 Your Name. All rights reserved.</span>
       <span>Designed &amp; coded by hand — no template.</span>
     </div>
   </div>
