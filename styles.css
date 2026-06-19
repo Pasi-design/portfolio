@@ -382,7 +382,15 @@ strong{ font-weight:700; }
 .gallery-title{ font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:1.02rem; }
 .gallery-meta{ display:block; margin-top:5px; font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--ink-2); letter-spacing:.01em; }
 
-.laptop-mock{ width:100%; max-width:230px; }
+.gallery-visual--img{
+  padding:0; min-height:220px; background:var(--ink);
+}
+.gallery-visual--img img{
+  width:100%; height:220px; object-fit:cover; object-position:top center;
+  display:block; border-radius:0;
+  transition:transform .8s var(--ease);
+}
+.gallery-card:hover .gallery-visual--img img{ transform:scale(1.04); }
 .laptop-screen-frame{ background:var(--ink); border-radius:12px 12px 3px 3px; padding:8px 8px 5px; }
 .laptop-screen{ background:#fff; border-radius:5px; overflow:hidden; min-height:118px; padding:14px; }
 .laptop-base{ height:8px; width:114%; margin:0 auto; position:relative; left:-7%; background:var(--ink); border-radius:0 0 8px 8px; }
