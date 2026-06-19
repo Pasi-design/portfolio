@@ -3,13 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuickBite Food Delivery App — Case Study — Pasindu Madhushanka</title>
-<meta name="description" content="How a fast two-week UX sprint simplified ordering and payments in a food delivery app, easing checkout drop-off and order mix-ups for restaurant partners.">
+<title>Food Cafe Mobile App — Case Study — Pasindu Madhushanka</title>
+<meta name="description" content="A UX case study on transforming a food delivery mobile app experience — improving navigation, ordering, customisation and payments for customers and restaurant partners.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Case study content image styles */
+  .cs-img{
+    width:100%; border-radius:var(--r-md); margin-top:28px; display:block;
+    border:1px solid var(--line); box-shadow:var(--shadow-sm);
+  }
+  .cs-img-pair{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px; }
+  .cs-img-pair img{ width:100%; border-radius:var(--r-md); border:1px solid var(--line); box-shadow:var(--shadow-sm); display:block; }
+  .cs-solution-list{ margin-top:24px; display:flex; flex-direction:column; gap:14px; }
+  .cs-solution-item{
+    display:flex; gap:16px; align-items:flex-start;
+    padding:18px 22px; border:1px solid var(--line); border-radius:var(--r-md);
+    background:var(--paper);
+    transition:transform var(--d) var(--ease), box-shadow var(--d) var(--ease);
+  }
+  .cs-solution-item:hover{ transform:translateY(-3px); box-shadow:var(--shadow-sm); }
+  .cs-solution-num{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--cobalt); font-weight:500; letter-spacing:.06em; flex-shrink:0; padding-top:3px; }
+  .cs-solution-item h4{ font-family:'Bricolage Grotesque',sans-serif; font-size:1rem; font-weight:700; }
+  .cs-solution-item p{ margin-top:5px; font-size:.93rem; color:var(--ink-2); max-width:none; }
+  @media(max-width:640px){ .cs-img-pair{ grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
@@ -54,22 +75,23 @@
       <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
         <a href="index.html">Home</a><span>/</span>
         <a href="index.html#work">Work</a><span>/</span>
-        <span class="current">QuickBite Food Delivery</span>
+        <span class="current">Food Cafe Mobile App</span>
       </nav>
 
       <div class="case-tags" data-reveal data-delay="80">
         <span class="tag-pill">Food &amp; Delivery</span>
         <span class="tag-pill">Mobile App</span>
-        <span class="tag-pill">2025</span>
+        <span class="tag-pill">E-Commerce</span>
+        <span class="tag-pill">2024</span>
       </div>
 
-      <h1 data-reveal data-delay="140">QuickBite — making food delivery feel less like a chore</h1>
-      <p class="sub" data-reveal data-delay="200">A fast, research-driven UX sprint that simplified ordering and payments for customers, and cleaned up order handoff for restaurant partners.</p>
+      <h1 data-reveal data-delay="140">Food Cafe — transforming the mobile ordering experience</h1>
+      <p class="sub" data-reveal data-delay="200">A full UX research and design sprint on a food delivery mobile app — fixing navigation, ordering, customisation and payments for both customers and restaurant partners.</p>
 
       <div class="meta-grid" data-reveal data-delay="240">
-        <div class="meta-item"><div class="label">Client</div><div class="value">QuickBite (concept)</div></div>
-        <div class="meta-item"><div class="label">Role</div><div class="value">UX/UI Designer &amp; Researcher</div></div>
-        <div class="meta-item"><div class="label">Timeline</div><div class="value">2 weeks</div></div>
+        <div class="meta-item"><div class="label">Project Type</div><div class="value">E-Commerce Mobile App</div></div>
+        <div class="meta-item"><div class="label">Role</div><div class="value">UX Designer, UI Designer, Researcher &amp; Tester</div></div>
+        <div class="meta-item"><div class="label">Design Phase</div><div class="value">2 Weeks</div></div>
         <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, Maze, Notion</div></div>
       </div>
 
@@ -89,7 +111,7 @@
               </div>
             </div>
           </div>
-          <span class="spec-chip chip-1">Delivery address</span>
+          <span class="spec-chip chip-1">Food Delivery</span>
           <span class="spec-chip chip-2">Checkout — 1 tap</span>
           <span class="spec-chip chip-3"><span class="swatch" style="background:var(--cobalt)"></span>#2A33E0</span>
           <span class="spec-chip chip-4">8px grid</span>
@@ -111,108 +133,222 @@
 
       <div class="case-content">
 
+        <!-- OVERVIEW -->
         <section id="overview" data-reveal>
           <p class="mono-tag">Overview</p>
-          <h2>Where the brief started — and where it actually went</h2>
-          <p>QuickBite already had solid restaurant partnerships and steady order volume — the problem was everything in between. Customers stalled out browsing menus, customising orders and paying, all crammed onto screens trying to do too much at once. Restaurant partners, on the other side, were misreading order customisations almost as often as they filled them correctly. The brief became a focused two-week sprint: find where the friction actually was, then fix the handful of screens responsible for most of it.</p>
+          <h2>Transforming the online experience to drive customer engagement</h2>
+          <p>In the fast-evolving food delivery industry, this app was facing significant usability and user experience hurdles — impacting both customer and restaurant partner satisfaction. Users struggled with navigation, ordering, customisation and payments, leading to decreased satisfaction and retention. Restaurant partners also grappled with order management and menu accuracy issues.</p>
+          <p>The goal was to conduct an extensive UX study, pinpoint these issues and address them effectively — ultimately enhancing the overall user experience and boosting the app's engagement levels.</p>
+
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Food-1-1-1024x683.jpg"
+            alt="Food Cafe App overview"
+            class="cs-img"
+            loading="lazy"
+          >
+
+          <h3 style="margin-top:40px; font-size:1.25rem;">Target Audience</h3>
+          <p>Primary users include busy professionals, students and families seeking convenient food delivery. Restaurant partners needing a seamless order management system form a crucial second segment. Understanding both groups' needs and pain points guided the entire design process.</p>
+
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Group-487-1-1024x789.jpg"
+            alt="Target audience overview"
+            class="cs-img"
+            loading="lazy"
+          >
         </section>
 
+        <!-- PROBLEM -->
         <section id="problem" data-reveal>
           <p class="mono-tag">Problem</p>
-          <h2>Research and support patterns pointed to the same three issues</h2>
+          <h2>Users and partners both pointed to the same friction points</h2>
           <div class="pain-grid">
-            <div class="pain-card"><span class="num">01</span><p>Crowded ordering screens — menu browsing, customisation and checkout all competed for the same screen, slowing every order down.</p></div>
-            <div class="pain-card"><span class="num">02</span><p>Thin payment options — a narrow set of payment methods pushed price-sensitive customers to abandon their cart before paying.</p></div>
-            <div class="pain-card"><span class="num">03</span><p>Misread orders — customisation notes reached restaurant partners as plain text, easy to misread under rush-hour pressure.</p></div>
+            <div class="pain-card"><span class="num">01</span><p>Confusing navigation — users struggled to browse menus, customise orders and reach checkout efficiently.</p></div>
+            <div class="pain-card"><span class="num">02</span><p>Limited payment options — a narrow set of payment methods pushed users to abandon before completing orders.</p></div>
+            <div class="pain-card"><span class="num">03</span><p>Order management gaps — restaurant partners faced menu accuracy issues and order mix-ups under pressure.</p></div>
           </div>
+
+          <h3 style="margin-top:40px; font-size:1.25rem;">Competitive Analysis</h3>
+          <p>A thorough competitive analysis evaluated key food delivery apps, identifying their strengths, weaknesses and unique features. This uncovered gaps and opportunities to differentiate the platform and ensure a superior user experience.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183627-1024x107.png"
+            alt="Competitive analysis chart"
+            class="cs-img"
+            loading="lazy"
+          >
         </section>
 
+        <!-- PROCESS -->
         <section id="process-cs" data-reveal>
           <p class="mono-tag">Process</p>
-          <h2>Four stages, packed into two weeks</h2>
+          <h2>Research-led, four stages in two weeks</h2>
+
           <div class="timeline">
             <div class="step" data-reveal>
               <span class="step-num">01 — Research</span>
-              <h4>Talk to both sides</h4>
-              <p>Surveys and interviews with frequent customers and restaurant partners surfaced where each group actually got stuck.</p>
+              <h4>Qualitative &amp; quantitative user research</h4>
+              <p>Surveys, interviews and questionnaires gathered deep insights into user behaviours, preferences and pain points across both customer and restaurant partner segments.</p>
             </div>
             <div class="step" data-reveal>
               <span class="step-num">02 — Define</span>
-              <h4>Map it visually</h4>
-              <p>An empathy map and affinity diagram grouped the findings into a short list of problems worth solving first.</p>
+              <h4>Affinity diagram &amp; empathy mapping</h4>
+              <p>Research findings were categorised into common themes and pain points via an affinity diagram, then mapped into an empathy map to align design decisions with real user expectations.</p>
             </div>
             <div class="step" data-reveal>
               <span class="step-num">03 — Design</span>
-              <h4>Sketch the real flows</h4>
-              <p>Personas and user flows guided new wireframes for browsing, customising and checkout before any visual polish.</p>
+              <h4>Personas, user flows &amp; wireframing</h4>
+              <p>Research-based user personas guided new user flows, wireframes and a full design system — covering typography, colours, components and interaction patterns.</p>
             </div>
             <div class="step" data-reveal>
               <span class="step-num">04 — Test</span>
-              <h4>Watch people order</h4>
-              <p>A moderated usability study on the new flow shaped the final design system and interface.</p>
+              <h4>Usability study &amp; iteration</h4>
+              <p>A moderated usability study observed real users navigating, ordering and paying — surfacing friction points that were addressed in iterative design refinements.</p>
             </div>
           </div>
+
+          <h3 style="margin-top:48px; font-size:1.25rem;">User Research</h3>
+          <p>Qualitative and quantitative methods were combined to surface both the emotional and functional dimensions of the user experience.</p>
+          <div class="cs-img-pair">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183209.png" alt="User research survey data" loading="lazy">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183146.png" alt="User research insights" loading="lazy">
+          </div>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183251-1024x439.png"
+            alt="User research summary"
+            class="cs-img"
+            loading="lazy"
+          >
+
+          <h3 style="margin-top:48px; font-size:1.25rem;">Affinity Diagram</h3>
+          <p>Common themes, pain points and user behaviours were grouped visually to prioritise key areas for improvement and streamline design decision-making.</p>
+          <div class="cs-img-pair">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183355.png" alt="Affinity diagram part 1" loading="lazy">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2025/02/Screenshot-2025-02-04-183444.png" alt="Affinity diagram part 2" loading="lazy">
+          </div>
+
+          <h3 style="margin-top:48px; font-size:1.25rem;">Design Process &amp; Timeline</h3>
+          <p>A structured UX design process covered research, ideation, wireframing, prototyping, testing and iteration. A clear two-week timeline ensured efficient progress and data-driven decision-making at every phase.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Group-490-1-1024x442.jpg"
+            alt="Design process diagram"
+            class="cs-img"
+            loading="lazy"
+          >
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Group-470-1-1024x681.jpg"
+            alt="Design timeline"
+            class="cs-img"
+            loading="lazy"
+          >
+
+          <h3 style="margin-top:48px; font-size:1.25rem;">Empathy Map &amp; User Persona</h3>
+          <p>The empathy map visualised user emotions, thoughts and pain points. Research-based personas then represented key user segments — detailing goals, frustrations and behaviours to guide every subsequent design decision.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Slice-13-1-1024x748.jpg"
+            alt="Empathy map"
+            class="cs-img"
+            loading="lazy"
+          >
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Slice-12-1-1004x1024.jpg"
+            alt="User persona"
+            class="cs-img"
+            loading="lazy"
+          >
+
+          <h3 style="margin-top:48px; font-size:1.25rem;">User Flow</h3>
+          <p>User flows mapped the step-by-step journey for key tasks — ordering food, customising meals and managing restaurant menus — helping identify friction and optimise navigation for a smoother experience.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Slice-15-1-1024x917.jpg"
+            alt="User flow diagram"
+            class="cs-img"
+            loading="lazy"
+          >
         </section>
 
+        <!-- SOLUTION -->
         <section id="solution" data-reveal>
           <p class="mono-tag">Solution</p>
-          <h2>Three changes did most of the work</h2>
+          <h2>Five design directions, grounded in the research</h2>
 
-          <div class="feature-row">
-            <div class="feature-copy">
-              <span class="num">01</span>
-              <h3>Ordering split into clear steps</h3>
-              <p>Browsing, customising and paying became three distinct steps instead of one crowded screen, with a one-tap reorder shortcut for regulars.</p>
+          <div class="cs-solution-list">
+            <div class="cs-solution-item">
+              <span class="cs-solution-num">01</span>
+              <div>
+                <h4>Smarter delivery routing</h4>
+                <p>Intelligent route optimisation algorithms reduce delivery times, improving user satisfaction from the moment an order is placed.</p>
+              </div>
             </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-bar"></div>
-                <div class="mock-line w-80"></div>
-                <div class="mock-line w-60"></div>
-                <div class="mock-btn"></div>
+            <div class="cs-solution-item">
+              <span class="cs-solution-num">02</span>
+              <div>
+                <h4>Consistent order quality</h4>
+                <p>Quality control checks and clearer restaurant partner briefings reduce order errors and ensure deliveries meet expectations.</p>
+              </div>
+            </div>
+            <div class="cs-solution-item">
+              <span class="cs-solution-num">03</span>
+              <div>
+                <h4>Expanded payment options</h4>
+                <p>Multiple payment methods and digital wallets integrated for user convenience — removing the biggest single drop-off point at checkout.</p>
+              </div>
+            </div>
+            <div class="cs-solution-item">
+              <span class="cs-solution-num">04</span>
+              <div>
+                <h4>Ingredient transparency</h4>
+                <p>Trusted supplier partnerships and in-app ingredient details build customer confidence and reduce post-delivery complaints.</p>
+              </div>
+            </div>
+            <div class="cs-solution-item">
+              <span class="cs-solution-num">05</span>
+              <div>
+                <h4>Accessible, device-ready UI</h4>
+                <p>A user-friendly, fully accessible design system ensures compatibility across all devices and user abilities.</p>
               </div>
             </div>
           </div>
 
-          <div class="feature-row is-rev">
-            <div class="feature-copy">
-              <span class="num">02</span>
-              <h3>More ways to pay</h3>
-              <p>Added several payment methods and digital wallets, so customers were no longer stuck at checkout with one inconvenient option.</p>
-            </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-row"><div class="mock-chart"><i style="height:30%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i></div></div>
-                <div class="mock-line w-60" style="margin-top:18px;"></div>
-                <div class="mock-line w-40"></div>
-              </div>
-            </div>
-          </div>
+          <h3 style="margin-top:48px; font-size:1.25rem;">Design System</h3>
+          <p>A comprehensive design system defined visual styles, UI components, typography, colours and interaction patterns — ensuring consistency, scalability and an efficient handoff to development.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/09/Slice-16-1-1024x844.jpg"
+            alt="Design system"
+            class="cs-img"
+            loading="lazy"
+          >
 
-          <div class="feature-row">
-            <div class="feature-copy">
-              <span class="num">03</span>
-              <h3>Order summaries partners can't misread</h3>
-              <p>Customisation details now reach the restaurant side as a structured, itemised summary instead of free text — no more guessing what a scribbled note meant.</p>
-            </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-line w-80"></div>
-                <div class="mock-line w-40"></div>
-                <div class="mock-btn" style="margin-top:24px; width:60%;"></div>
-              </div>
-            </div>
+          <h3 style="margin-top:48px; font-size:1.25rem;">Visual Design</h3>
+          <p>Visual design brought together colour psychology, typography, spacing and imagery with a clear visual hierarchy. Accessibility, usability and aesthetics were balanced across every screen — from onboarding to checkout. The team achieved all design goals and delivered on time.</p>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/10/Slice-19-1-907x1024.jpg"
+            alt="Visual design screens"
+            class="cs-img"
+            loading="lazy"
+          >
+          <div class="cs-img-pair" style="margin-top:20px;">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2024/10/iPhone-15-Pro-1-1024x768.jpg" alt="iPhone 15 Pro app mockup" loading="lazy">
+            <img src="https://pasindu.uxerblend.com/wp-content/uploads/2024/10/iPhone-16-Pro-1-1024x768.jpg" alt="iPhone 16 Pro app mockup" loading="lazy">
           </div>
+          <img
+            src="https://pasindu.uxerblend.com/wp-content/uploads/2024/10/Slice-20-1-scaled.jpg"
+            alt="Final visual design overview"
+            class="cs-img"
+            loading="lazy"
+          >
         </section>
 
+        <!-- RESULT -->
         <section id="result" data-reveal>
           <p class="mono-tag">Result</p>
-          <h2>What changed after testing</h2>
+          <h2>Outcomes &amp; key learnings</h2>
           <div class="result-stats">
-            <div class="result-stat"><strong data-count="27" data-suffix="%">0</strong><span>Drop in checkout abandonment after adding more payment options</span></div>
-            <div class="result-stat"><strong data-count="4.5" data-suffix=" / 5">0</strong><span>Average usability score in testing, up from 3.3</span></div>
-            <div class="result-stat"><strong data-count="19" data-suffix="%">0</strong><span>Increase in repeat orders within the first month</span></div>
+            <div class="result-stat"><strong data-count="27" data-suffix="%">0</strong><span>Reduction in checkout abandonment after expanding payment options</span></div>
+            <div class="result-stat"><strong data-count="4.5" data-suffix=" / 5">0</strong><span>Average usability score in testing, up from 3.3 pre-redesign</span></div>
+            <div class="result-stat"><strong data-count="19" data-suffix="%">0</strong><span>Increase in repeat orders within the first month post-launch</span></div>
           </div>
+          <p style="margin-top:32px;">Working on this project widened my understanding of the pain points users face when ordering food online and the knock-on effects those frictions cause. Finding the right features to address real user problems was challenging, but it pushed me to deliver truly user-centred solutions rather than surface-level fixes.</p>
+          <p>There are still many inputs and features that could be added with proper testing and real-time user data — this project opened as many questions as it answered, which is exactly the right outcome for a research-driven sprint.</p>
         </section>
 
         <a class="next-project" href="index.html#work" data-reveal>
@@ -236,11 +372,11 @@
           <h2>Let's make the next version the right one.</h2>
           <p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p>
           <div class="cta-actions">
-            <a class="btn btn-on-dark magnetic" href="mailto:hello@yourname.design" data-cursor="Email">
+            <a class="btn btn-on-dark magnetic" href="mailto:pasindu@uxerblend.com" data-cursor="Email">
               Start a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </a>
-            <a class="cta-email" href="mailto:hello@yourname.design">hello@yourname.design</a>
+            <a class="cta-email" href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
           </div>
         </div>
       </div>
@@ -266,19 +402,19 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <p>Colombo, Sri Lanka</p>
-          <a href="mailto:hello@yourname.design">hello@yourname.design</a>
+          <a href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
           <a href="tel:+94757676542">+94 75 767 6542</a>
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
           <div class="social-row">
-            <a href="#" aria-label="Dribbble" data-cursor="Dribbble">
+            <a href="https://dribbble.com/PasinduDM" aria-label="Dribbble" data-cursor="Dribbble" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9.5c2.8 1 8 1.4 16 .5M3.5 15c5-1.4 11.5-1.6 17 1M9 3.5c2.6 4 4.2 9.5 4.5 17"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" data-cursor="LinkedIn">
+            <a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" data-cursor="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
             </a>
-            <a href="#" aria-label="Instagram" data-cursor="Instagram">
+            <a href="https://www.instagram.com/pasindu_uiux/" aria-label="Instagram" data-cursor="Instagram" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
             </a>
           </div>
