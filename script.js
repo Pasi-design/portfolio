@@ -231,8 +231,8 @@
     }
   }
 
-  /* ---------------- hero headline word highlight on scroll ---------------- */
-  var heroHL = document.querySelector('.hero-headline');
+  /* ---------------- hero intro word highlight on scroll ---------------- */
+  var heroHL = document.querySelector('.hero-intro');
   if(heroHL){
     var hWords = heroHL.querySelectorAll('.hw');
     var initLit = 3;
