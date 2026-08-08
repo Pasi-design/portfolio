@@ -231,4 +231,30 @@
     }
   }
 
+  /* ---------------- hero headline word highlight on scroll ---------------- */
+  var heroHL = document.querySelector('.hero-headline');
+  if(heroHL){
+    var hWords = heroHL.querySelectorAll('.hw');
+    var initLit = 3;
+    function setLit(n){
+      hWords.forEach(function(w, i){ w.classList.toggle('lit', i < n); });
+    }
+    setLit(initLit);
+    if(!reduceMotion){
+      function tickHL(){
+        var rect = heroHL.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var scrolled = vh - rect.top;
+        var total = rect.height + vh;
+        var progress = Math.max(0, Math.min(1, scrolled / total));
+        var n = initLit + Math.round(progress * (hWords.length - initLit) * 1.6);
+        setLit(Math.min(n, hWords.length));
+      }
+      document.addEventListener('scroll', tickHL, { passive:true });
+      tickHL();
+    } else {
+      setLit(hWords.length);
+    }
+  }
+
 })();

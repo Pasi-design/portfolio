@@ -51,12 +51,27 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow" data-reveal><span class="dot"></span>UI / UX Designer — Colombo, Sri Lanka</p>
-        <h1 class="hero-title" data-reveal data-delay="80">Designing <em>clarity</em><br>into complex products.</h1>
-        <p class="hero-sub" data-reveal data-delay="160">I'm Pasindu Madhushanka, a product designer who turns tangled flows into interfaces people actually enjoy using — from the first wireframe to the shipped screen.</p>
-        <div class="hero-actions" data-reveal data-delay="240">
+    <div class="container">
+
+      <div class="hero-identity" data-reveal>
+        <div class="hero-id-left">
+          <span class="hero-id-avatar">
+            <img src="profile-placeholder.svg" alt="Pasindu Madhushanka">
+          </span>
+          <div class="hero-id-text">
+            <strong class="hero-id-name">Pasindu Madhushanka</strong>
+            <span class="hero-id-role">UI/UX Designer — Colombo, Sri Lanka</span>
+          </div>
+        </div>
+        <div class="hero-id-right">
+          <p class="eyebrow"><span class="dot"></span>Open to new projects &middot; 2026</p>
+        </div>
+      </div>
+
+      <h1 class="hero-headline" aria-label="Designing clarity into complex products — one research insight, one interface decision at a time."><span class="hw">Designing </span><span class="hw">clarity </span><span class="hw">into </span><span class="hw">complex </span><span class="hw">products </span><span class="hw">— </span><span class="hw">one </span><span class="hw">research </span><span class="hw">insight, </span><span class="hw">one </span><span class="hw">interface </span><span class="hw">decision </span><span class="hw">at </span><span class="hw">a </span><span class="hw">time.</span></h1>
+
+      <div class="hero-bottom" data-reveal data-delay="80">
+        <div class="hero-actions">
           <a class="btn btn-primary magnetic" href="#work" data-cursor="Scroll">
             View my work
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -66,31 +81,13 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
           </a>
         </div>
-        <div class="hero-stats" data-reveal data-delay="320">
-          <div class="stat"><strong data-count="4" data-suffix="+">0</strong><span>Years in practice</span></div>
+        <div class="hero-stats">
+          <div class="stat"><strong data-count="5" data-suffix="+">0</strong><span>Years in practice</span></div>
           <div class="stat"><strong data-count="30" data-suffix="+">0</strong><span>Products shipped</span></div>
           <div class="stat"><strong data-count="12" data-suffix="+">0</strong><span>Industries explored</span></div>
         </div>
       </div>
 
-      <div class="hero-canvas-wrap" data-reveal data-delay="200">
-        <div class="hero-canvas">
-          <div class="mock-app">
-            <div class="mock-bar"></div>
-            <div class="mock-line w-80"></div>
-            <div class="mock-line w-60"></div>
-            <div class="mock-row">
-              <div class="mock-chart"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:35%"></i></div>
-            </div>
-            <div class="mock-line w-40"></div>
-            <div class="mock-btn"></div>
-          </div>
-          <span class="spec-chip chip-1"><span class="swatch" style="background:var(--cobalt)"></span>#2A33E0</span>
-          <span class="spec-chip chip-2">Auto layout</span>
-          <span class="spec-chip chip-3">8px grid</span>
-          <span class="spec-chip chip-4">WCAG AA ✓</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -111,7 +108,7 @@
   </div>
 
   <!-- SELECTED WORK -->
-  <!-- <section class="section" id="work">
+  <section class="section" id="work">
     <div class="container">
       <div class="section-foot" data-reveal>
         <div class="section-head">
@@ -122,18 +119,18 @@
       </div>
 
       <div class="work-grid">
-        <a class="project-card cover-1" href="project.html" data-reveal data-cursor="View">
+        <a class="project-card cover-1" href="food-cafe-case-study.html" data-reveal data-cursor="View">
           <div class="project-cover">
             <div class="bg"></div><span class="cover-shape"></span>
-            <span class="tag">Fintech · 2025</span>
+            <span class="tag">Food &amp; Delivery · 2024</span>
             <span class="view-tag">View case study
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </span>
           </div>
           <div class="project-info">
-            <h3>Nimbus Banking App</h3>
-            <p>Calming a stressful core flow with research-led information hierarchy.</p>
-            <div class="project-meta-row"><span>Mobile App</span><span>Lead Designer</span></div>
+            <h3>Food Cafe — Mobile Ordering App</h3>
+            <p>End-to-end UX for a Canadian food delivery app — research, design system and high-fidelity UI.</p>
+            <div class="project-meta-row"><span>Mobile App</span><span>UX Designer &amp; Researcher</span></div>
           </div>
         </a>
 
@@ -154,7 +151,7 @@
 
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- GALLERY -->
   <section class="section" id="gallery">
@@ -449,11 +446,11 @@
           <h2>Let's make the next version the right one.</h2>
           <p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p>
           <div class="cta-actions">
-            <a class="btn btn-on-dark magnetic" href="mailto:pasindu.uiux@gmail.com" data-cursor="Email">
+            <a class="btn btn-on-dark magnetic" href="mailto:hello@yourname.design" data-cursor="Email">
               Start a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </a>
-            <a class="cta-email" href="mailto:pasindu.uiux@gmail.com">pasindu.uiux@gmail.com</a>
+            <a class="cta-email" href="mailto:hello@yourname.design">hello@yourname.design</a>
           </div>
         </div>
       </div>
@@ -479,16 +476,16 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <p>Colombo, Sri Lanka</p>
-          <a href="mailto:pasindu.uiux@gmail.com">pasindu.uiux@gmail.com</a>
+          <a href="mailto:hello@yourname.design">hello@yourname.design</a>
           <a href="tel:+94757676542">+94 75 767 6542</a>
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
           <div class="social-row">
-            <a href="https://dribbble.com/PasinduDM" aria-label="Dribbble" data-cursor="Dribbble">
+            <a href="#" aria-label="Dribbble" data-cursor="Dribbble">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9.5c2.8 1 8 1.4 16 .5M3.5 15c5-1.4 11.5-1.6 17 1M9 3.5c2.6 4 4.2 9.5 4.5 17"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" data-cursor="LinkedIn">
+            <a href="#" aria-label="LinkedIn" data-cursor="LinkedIn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
             </a>
             <a href="#" aria-label="Instagram" data-cursor="Instagram">
