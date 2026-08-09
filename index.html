@@ -52,7 +52,7 @@
 
       <div class="hero-identity" data-reveal>
         <div class="hero-id-photo">
-          <img src="profimg.jpeg" alt="Pasindu Madhushanka">
+          <img src="profile-placeholder.svg" alt="Pasindu Madhushanka">
         </div>
         <div class="hero-id-content">
           <p class="eyebrow"><span class="dot"></span>Open to new projects &middot; 2026</p>
@@ -111,9 +111,9 @@
       </div>
 
       <div class="work-grid">
-        <a class="project-card cover-1" href="food-cafe-case-study.html" data-reveal data-cursor="View">
+        <a class="project-card" href="food-cafe-case-study.html" data-reveal data-cursor="View">
           <div class="project-cover">
-            <div class="bg"></div><span class="cover-shape"></span>
+            <img src="Food__2_.jpg" alt="Food Cafe Mobile App" class="project-cover-photo">
             <span class="tag">Food &amp; Delivery · 2024</span>
             <span class="view-tag">View case study
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -126,18 +126,21 @@
           </div>
         </a>
 
-        <a class="project-card cover-2" href="project.html" data-reveal data-cursor="View">
-          <div class="project-cover">
-            <div class="bg"></div><span class="cover-shape"></span>
-            <span class="tag">SaaS · 2024</span>
-            <span class="view-tag">View case study
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </span>
+        <a class="project-card hut-card" href="#" id="hutteriteCard" data-reveal>
+          <div class="project-cover hut-cover">
+            <div class="hut-blur-bg"></div>
+            <span class="cover-shape" style="background:rgba(255,255,255,0.06);"></span>
+            <div class="hut-overlay">
+              <span class="hut-lock-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <span class="hut-lock-label">Password Required</span>
+            </div>
           </div>
           <div class="project-info">
-            <h3>Atlas Analytics</h3>
-            <p>Untangling a dense B2B dashboard into a flow non-analysts could read.</p>
-            <div class="project-meta-row"><span>Web Platform</span><span>UX Designer</span></div>
+            <h3>Hutterite E Commerce Platform</h3>
+            <p>A comprehensive e-commerce platform designed for a unique community brand. Password protected.</p>
+            <div class="project-meta-row"><span>Web Platform</span><span>Lead UX Designer</span></div>
           </div>
         </a>
 
@@ -493,6 +496,27 @@
     </div>
   </div>
 </footer>
+
+<!-- PASSWORD MODAL -->
+<div class="pw-modal" id="pwModal" aria-hidden="true" role="dialog" aria-label="Enter project password">
+  <div class="pw-backdrop"></div>
+  <div class="pw-box">
+    <button class="pw-close" aria-label="Close">&times;</button>
+    <div class="pw-lock-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+    <h3>Protected Case Study</h3>
+    <p>This project is password protected. Enter the password to view the full case study.</p>
+    <input type="password" class="pw-input" id="pwInput" placeholder="Enter password" autocomplete="off">
+    <p class="pw-error" id="pwError"></p>
+    <div class="pw-actions">
+      <button class="btn btn-primary" id="pwSubmit">
+        Open Project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

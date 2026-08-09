@@ -257,4 +257,47 @@
     }
   }
 
+  /* ---------------- hutterite password modal ---------------- */
+  var hutCard = document.getElementById('hutteriteCard');
+  var pwModal = document.getElementById('pwModal');
+  if(hutCard && pwModal){
+    var pwInput  = document.getElementById('pwInput');
+    var pwError  = document.getElementById('pwError');
+    var pwSubmit = document.getElementById('pwSubmit');
+    var pwClose  = pwModal.querySelector('.pw-close');
+    var pwBack   = pwModal.querySelector('.pw-backdrop');
+    function openPW(){
+      pwModal.removeAttribute('aria-hidden');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ if(pwInput) pwInput.focus(); }, 80);
+    }
+    function closePW(){
+      pwModal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      if(pwInput){ pwInput.value=''; pwInput.classList.remove('is-error'); }
+      if(pwError) pwError.textContent='';
+    }
+    hutCard.addEventListener('click', function(e){ e.preventDefault(); openPW(); });
+    if(pwClose) pwClose.addEventListener('click', closePW);
+    if(pwBack)  pwBack.addEventListener('click', closePW);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePW(); });
+    function tryPassword(){
+      if(!pwInput) return;
+      if(pwInput.value.trim() === 'Hut'){
+        closePW();
+        window.location.href = 'hutterite-case-study.html';
+      } else {
+        pwError.textContent = 'Incorrect password — please try again.';
+        pwInput.classList.add('is-error');
+        pwInput.value = '';
+        pwInput.focus();
+      }
+    }
+    if(pwSubmit) pwSubmit.addEventListener('click', tryPassword);
+    if(pwInput)  pwInput.addEventListener('keydown', function(e){
+      if(e.key==='Enter') tryPassword();
+      else { pwInput.classList.remove('is-error'); pwError.textContent=''; }
+    });
+  }
+
 })();

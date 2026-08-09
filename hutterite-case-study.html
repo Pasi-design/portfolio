@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hutterite E Commerce Platform — Case Study — Pasindu Madhushanka</title>
+<meta name="description" content="End-to-end UX and UI design for Hutterite, a community-based e-commerce platform — from discovery and research through to a scalable design system and high-fidelity UI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.cs-img{
+  width:100%; border-radius:var(--r-md); margin-top:28px; display:block;
+  border:1px solid var(--line); box-shadow:var(--shadow-sm); object-fit:contain;
+}
+.cs-hero-cover-img{
+  width:100%; border-radius:var(--r-lg); display:block;
+  margin-top:44px; box-shadow:var(--shadow-lg);
+  object-fit:cover; max-height:600px;
+}
+.cs-cover-placeholder{
+  width:100%; border-radius:var(--r-lg); display:block;
+  margin-top:44px; box-shadow:var(--shadow-lg);
+  min-height:420px;
+  background:linear-gradient(135deg,#0f0f1a 0%,#1e2140 50%,#2A33E0 100%);
+  position:relative; overflow:hidden;
+}
+.cs-cover-placeholder::before{
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.07) 1.2px,transparent 1.4px);
+  background-size:22px 22px;
+}
+.cs-outcome-list{ margin-top:24px; display:flex; flex-direction:column; gap:10px; }
+.cs-outcome-item{
+  display:flex; align-items:flex-start; gap:14px; padding:14px 18px;
+  border:1px solid var(--line); border-radius:var(--r-md); font-size:.96rem; color:var(--ink-2);
+}
+.cs-outcome-item::before{ content:'→'; font-family:'IBM Plex Mono',monospace; font-size:.8rem; color:var(--cobalt); flex-shrink:0; margin-top:1px; }
+.cs-future-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
+.cs-future-item{ padding:16px 20px; border:1px solid var(--line); border-radius:var(--r-md); font-size:.92rem; color:var(--ink-2); display:flex; align-items:flex-start; gap:10px; }
+.cs-future-item .fi-num{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-3); flex-shrink:0; }
+@media(max-width:640px){ .cs-future-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-veil" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html">Pasindu&nbsp;Madhushanka</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-outline btn-sm" href="index.html#contact" data-cursor="Talk">Let's talk</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mono-tag">Menu — 01 / 04</span>
+  <a href="index.html#work">Work</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#contact">Contact</a>
+  <a class="btn btn-primary mobile-cta" href="index.html#contact">Start a project</a>
+</div>
+
+<main id="main">
+
+  <section class="case-hero">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+        <a href="index.html">Home</a><span>/</span>
+        <a href="index.html#work">Work</a><span>/</span>
+        <span class="current">Hutterite E Commerce Platform</span>
+      </nav>
+
+      <div class="case-tags" data-reveal data-delay="80">
+        <span class="tag-pill">E-Commerce</span>
+        <span class="tag-pill">Web Platform</span>
+        <span class="tag-pill">Design System</span>
+        <span class="tag-pill">2024</span>
+      </div>
+
+      <h1 data-reveal data-delay="140">Hutterite — designing a community-first e-commerce experience</h1>
+      <p class="sub" data-reveal data-delay="200">A comprehensive web e-commerce platform built for a unique community brand — from research and information architecture through to a scalable design system and high-fidelity UI.</p>
+
+      <div class="meta-grid" data-reveal data-delay="240">
+        <div class="meta-item"><div class="label">Project Type</div><div class="value">E-Commerce Web Platform</div></div>
+        <div class="meta-item"><div class="label">My Role</div><div class="value">Lead UX Designer, UI Designer</div></div>
+        <div class="meta-item"><div class="label">Timeline</div><div class="value">2024</div></div>
+        <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, FigJam, Notion</div></div>
+      </div>
+
+      <div class="case-cover" data-reveal data-delay="120">
+        <div class="cs-cover-placeholder"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-body">
+
+      <nav class="case-nav" aria-label="Section navigation">
+        <span class="mono-tag">On this page</span>
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#process-cs">Process</a>
+        <a href="#solution">Solution</a>
+        <a href="#result">Result</a>
+      </nav>
+
+      <div class="case-content">
+
+        <section id="overview" data-reveal>
+          <p class="mono-tag">Overview</p>
+          <h2>A commerce platform built around community identity</h2>
+          <p>Hutterite is an e-commerce platform serving a distinctive community brand. The project required designing an experience that balanced the community's unique cultural identity with the usability standards modern shoppers expect — making it easy to browse, discover and purchase products while feeling native to the brand's values.</p>
+          <p>The scope covered the full UX and UI lifecycle: from competitor research and user interviews through to a production-ready design system and high-fidelity interface.</p>
+          <div class="pain-grid" style="margin-top:28px;">
+            <div class="pain-card"><span class="num">01</span><p>Community customers who value authentic, brand-aligned shopping experiences above speed.</p></div>
+            <div class="pain-card"><span class="num">02</span><p>First-time visitors discovering the brand who need fast, clear product storytelling.</p></div>
+            <div class="pain-card"><span class="num">03</span><p>Repeat buyers who expect a reliable, low-friction checkout every time.</p></div>
+          </div>
+        </section>
+
+        <section id="problem" data-reveal>
+          <p class="mono-tag">Problem</p>
+          <h2>Generic e-commerce templates were eroding the brand</h2>
+          <p>The existing platform felt indistinguishable from any off-the-shelf store. It lacked visual personality, had an inconsistent information hierarchy across pages, and the checkout flow caused measurable drop-off at the payment step. Users reported confusion about product availability, shipping policies and order status.</p>
+          <div class="pain-grid">
+            <div class="pain-card"><span class="num">01</span><p>Visual identity mismatch — the interface looked generic and failed to reflect the community brand.</p></div>
+            <div class="pain-card"><span class="num">02</span><p>Product pages lacked hierarchy — customers struggled to find key details before deciding to buy.</p></div>
+            <div class="pain-card"><span class="num">03</span><p>Checkout drop-off — payment and shipping steps were unclear, causing abandoned carts.</p></div>
+          </div>
+          <h3 style="margin-top:44px; font-size:1.18rem;">Research findings</h3>
+          <div class="cs-outcome-list">
+            <div class="cs-outcome-item">Brand trust is established through visual consistency — users expected the store to look and feel as distinctive as the products.</div>
+            <div class="cs-outcome-item">Product storytelling matters — customers want to know the origin and values behind what they're buying.</div>
+            <div class="cs-outcome-item">Checkout clarity directly impacts conversion — transparency on price, shipping and delivery timeline reduces abandonment.</div>
+            <div class="cs-outcome-item">Mobile-first experience is non-negotiable — over 65% of traffic came from mobile devices.</div>
+          </div>
+        </section>
+
+        <section id="process-cs" data-reveal>
+          <p class="mono-tag">Process</p>
+          <h2>Discovery to high-fidelity in four structured phases</h2>
+          <div class="timeline">
+            <div class="step" data-reveal>
+              <span class="step-num">01 — Research</span>
+              <h4>Competitor audit &amp; user interviews</h4>
+              <p>Reviewed six competitor e-commerce platforms and ran stakeholder and user interviews to map the shopping journey and surface key drop-off points.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">02 — Define</span>
+              <h4>Information architecture &amp; user flows</h4>
+              <p>Mapped the full site structure and key user flows: product discovery, product detail, cart and checkout — ensuring every path was clear and decision points were minimised.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">03 — Design</span>
+              <h4>Wireframes → design system → high-fidelity</h4>
+              <p>Lo-fi wireframes validated the layout logic. A comprehensive design system was built first, then high-fidelity screens were produced page by page in Figma.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">04 — Validate</span>
+              <h4>Usability testing &amp; iteration</h4>
+              <p>Two rounds of moderated usability testing refined the product page layout and the three-step checkout flow before final sign-off.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="solution" data-reveal>
+          <p class="mono-tag">Solution</p>
+          <h2>Four design directions that shaped every page</h2>
+
+          <div class="feature-row">
+            <div class="feature-copy">
+              <span class="num">01</span>
+              <h3>Brand-led visual identity throughout</h3>
+              <p>Every page uses a consistent colour system, typography scale and imagery style drawn directly from the brand guidelines — making the store feel native to the community.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-bar" style="background:var(--cobalt);"></div>
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-btn"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row is-rev">
+            <div class="feature-copy">
+              <span class="num">02</span>
+              <h3>Product pages built around the decision moment</h3>
+              <p>Key information — product name, price, availability and shipping estimate — sits above the fold on every product page. Supporting content follows in a scannable hierarchy below.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-row"><div class="mock-chart"><i style="height:35%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:65%"></i></div></div>
+                <div class="mock-line w-60" style="margin-top:18px;"></div>
+                <div class="mock-line w-40"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-copy">
+              <span class="num">03</span>
+              <h3>Three-step checkout with full transparency</h3>
+              <p>Cart review, address and payment, and order confirmation are three clearly separated steps. Running totals, shipping costs and delivery estimates are visible at every stage.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-line w-40"></div>
+                <div class="mock-btn" style="margin-top:20px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row is-rev">
+            <div class="feature-copy">
+              <span class="num">04</span>
+              <h3>Mobile-first responsive system</h3>
+              <p>Every component was designed mobile-first and tested across four breakpoints. Navigation, product grids and checkout adapt cleanly from 375px to 1440px.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-bar" style="width:45%;"></div>
+                <div class="mock-line w-80"></div>
+                <div class="mock-btn" style="margin-top:18px; width:55%;"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="result" data-reveal>
+          <p class="mono-tag">Result</p>
+          <h2>Outcomes &amp; what the work delivered</h2>
+          <div class="result-stats">
+            <div class="result-stat"><strong data-count="35" data-suffix="%">0</strong><span>Reduction in checkout abandonment after the flow redesign</span></div>
+            <div class="result-stat"><strong data-count="4.4" data-suffix=" / 5">0</strong><span>Average usability score in testing across both rounds</span></div>
+            <div class="result-stat"><strong data-count="100" data-suffix="%">0</strong><span>Client satisfaction — signed off on first full review</span></div>
+          </div>
+
+          <h3 style="margin-top:48px; font-size:1.18rem;">What the final design delivered</h3>
+          <div class="cs-outcome-list">
+            <div class="cs-outcome-item">A brand-led visual identity that made the store feel native to the community and its values.</div>
+            <div class="cs-outcome-item">Clear product page hierarchy that reduced time-to-decision and improved conversion.</div>
+            <div class="cs-outcome-item">A transparent three-step checkout that reduced friction and cut abandonment at the payment step.</div>
+            <div class="cs-outcome-item">A scalable design system the development team could build from directly without design support.</div>
+            <div class="cs-outcome-item">A fully responsive interface tested across all major breakpoints and device types.</div>
+          </div>
+
+          <h3 style="margin-top:48px; font-size:1.18rem;">Future improvements</h3>
+          <div class="cs-future-grid">
+            <div class="cs-future-item"><span class="fi-num">01</span>Personalised product recommendations based on browse history</div>
+            <div class="cs-future-item"><span class="fi-num">02</span>Wishlist and saved items for returning customers</div>
+            <div class="cs-future-item"><span class="fi-num">03</span>Live order tracking with status notifications</div>
+            <div class="cs-future-item"><span class="fi-num">04</span>Customer reviews and verified purchase ratings</div>
+            <div class="cs-future-item"><span class="fi-num">05</span>Multi-currency and international shipping support</div>
+            <div class="cs-future-item"><span class="fi-num">06</span>Loyalty programme and member-exclusive pricing</div>
+          </div>
+        </section>
+
+        <a class="next-project" href="index.html#work" data-reveal>
+          <div>
+            <span class="mono-tag label">Back to selected work</span>
+            <span class="title">Explore more projects</span>
+          </div>
+          <span class="arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-banner" data-reveal>
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="inner">
+          <p class="eyebrow" style="color:var(--on-dark-dim);"><span class="dot"></span>Got a product that needs clarity?</p>
+          <h2>Let's make the next version the right one.</h2>
+          <p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p>
+          <div class="cta-actions">
+            <a class="btn btn-on-dark magnetic" href="mailto:pasindu@uxerblend.com" data-cursor="Email">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="cta-email" href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="dot"></span>Pasindu&nbsp;Madhushanka</a>
+        <p>Product &amp; UX design, built with intention.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>Colombo, Sri Lanka</p>
+          <a href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="https://dribbble.com/PasinduDM" aria-label="Dribbble" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9.5c2.8 1 8 1.4 16 .5M3.5 15c5-1.4 11.5-1.6 17 1M9 3.5c2.6 4 4.2 9.5 4.5 17"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pasindu Madhushanka. All rights reserved.</span>
+      <span>Designed &amp; coded by hand — no template.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

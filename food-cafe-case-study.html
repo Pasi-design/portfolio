@@ -102,6 +102,18 @@
   padding:48px 32px; margin-top:32px;
 }
 
+/* case study real images */
+.cs-hero-cover-img{
+  width:100%; border-radius:var(--r-lg); display:block;
+  margin-top:44px; box-shadow:var(--shadow-lg);
+  object-fit:cover; max-height:640px;
+}
+.cs-img{
+  width:100%; border-radius:var(--r-md); margin-top:28px; display:block;
+  border:1px solid var(--line); box-shadow:var(--shadow-sm);
+  object-fit:contain;
+}
+
 @media(max-width:768px){
   .cs-phone-row{ grid-template-columns:1fr; }
   .cs-phone-col .phone-mock{ max-width:220px; }
@@ -172,47 +184,9 @@
         <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, FigJam, Maze</div></div>
       </div>
 
-      <!-- DUMMY COVER IMAGE – top -->
+      <!-- Project cover image -->
       <div class="case-cover" data-reveal data-delay="120">
-        <div class="hero-canvas">
-          <div class="phone-mock">
-            <div class="phone-screen">
-              <div class="phone-status"><span>9:41</span><span>●●● 100%</span></div>
-              <div class="fa-header">
-                <div>
-                  <span class="fa-loc-label">Delivery to</span>
-                  <span class="fa-loc-val">Downtown, ON ↓</span>
-                </div>
-                <div class="fa-avatar-sm"></div>
-              </div>
-              <div class="fa-search"></div>
-              <div class="fa-cats">
-                <span class="fa-cat active">All</span>
-                <span class="fa-cat">Pizza</span>
-                <span class="fa-cat">Burgers</span>
-                <span class="fa-cat">Sushi</span>
-              </div>
-              <div class="fa-rest-card">
-                <div class="fa-rest-img"></div>
-                <div class="fa-rest-body">
-                  <div class="fa-rest-name"></div>
-                  <div class="fa-rest-meta"></div>
-                </div>
-              </div>
-              <div class="fa-rest-card">
-                <div class="fa-rest-img" style="background:linear-gradient(135deg,#2A33E0 0%,#8b93ff 100%);"></div>
-                <div class="fa-rest-body">
-                  <div class="fa-rest-name"></div>
-                  <div class="fa-rest-meta"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <span class="spec-chip chip-1">Home · Discover</span>
-          <span class="spec-chip chip-2">One-tap reorder</span>
-          <span class="spec-chip chip-3"><span class="swatch" style="background:#FF6B35"></span>#FF6B35</span>
-          <span class="spec-chip chip-4">WCAG AA ✓</span>
-        </div>
+        <img src="Food__2_.jpg" alt="Food Cafe mobile app on desk" class="cs-hero-cover-img">
       </div>
 
     </div>
@@ -361,108 +335,20 @@
             </div>
           </div>
 
-          <!-- UI SCREENS – dummy -->
+          <!-- UI SCREENS – real image -->
           <h3 style="margin-top:56px; font-size:1.18rem;">UI Design</h3>
           <p>Three core flows — home/discovery, item detail and cart/checkout — designed to work as a seamless sequence rather than three separate screens.</p>
+          <img src="Home__5_.jpg" alt="Food Cafe home screen UI design" class="cs-img" loading="lazy">
 
-          <div class="cs-phone-row">
-            <div class="cs-phone-col">
-              <div class="phone-mock">
-                <div class="phone-screen">
-                  <div class="phone-status"><span>9:41</span><span>100%</span></div>
-                  <div class="fa-header">
-                    <div><span class="fa-loc-label">Deliver to</span><span class="fa-loc-val">Downtown ↓</span></div>
-                    <div class="fa-avatar-sm"></div>
-                  </div>
-                  <div class="fa-search"></div>
-                  <div class="fa-cats">
-                    <span class="fa-cat active">All</span>
-                    <span class="fa-cat">Pizza</span>
-                    <span class="fa-cat">Burgers</span>
-                  </div>
-                  <div class="fa-rest-card">
-                    <div class="fa-rest-img"></div>
-                    <div class="fa-rest-body"><div class="fa-rest-name"></div><div class="fa-rest-meta"></div></div>
-                  </div>
-                  <div class="fa-rest-card">
-                    <div class="fa-rest-img" style="background:linear-gradient(135deg,#2A33E0,#8b93ff);"></div>
-                    <div class="fa-rest-body"><div class="fa-rest-name"></div><div class="fa-rest-meta"></div></div>
-                  </div>
-                </div>
-              </div>
-              <span class="cs-screen-label">Home</span>
-            </div>
+          <!-- VISUAL DESIGN – real image -->
+          <h3 style="margin-top:48px; font-size:1.18rem;">Visual Design</h3>
+          <p>The visual design system brings together colour psychology, typography, spacing and imagery with a clear visual hierarchy. Every interaction was designed to reduce unnecessary decisions and keep the user focused on completing their order.</p>
+          <img src="Slice_17.jpg" alt="Food Cafe visual design overview with annotations" class="cs-img" loading="lazy">
 
-            <div class="cs-phone-col">
-              <div class="phone-mock">
-                <div class="phone-screen">
-                  <div class="phone-status"><span>9:41</span><span>100%</span></div>
-                  <div class="fa-item-hero"></div>
-                  <div class="fa-item-name"></div>
-                  <div class="fa-item-desc"></div>
-                  <div class="fa-item-desc s"></div>
-                  <div class="fa-qty-row">
-                    <span class="fa-loc-label">Customise</span>
-                    <div class="fa-qty">
-                      <span></span><strong>1</strong><span style="background:var(--ink);"></span>
-                    </div>
-                  </div>
-                  <div class="fa-add"></div>
-                </div>
-              </div>
-              <span class="cs-screen-label">Item Detail</span>
-            </div>
-
-            <div class="cs-phone-col">
-              <div class="phone-mock">
-                <div class="phone-screen">
-                  <div class="phone-status"><span>9:41</span><span>100%</span></div>
-                  <div class="fa-item-name" style="width:40%; margin-bottom:14px;"></div>
-                  <div class="fa-cart-row"><div class="fa-rest-name"></div><div class="fa-cart-amt"></div></div>
-                  <div class="fa-cart-row"><div class="fa-rest-name" style="width:50%;"></div><div class="fa-cart-amt" style="width:22%;"></div></div>
-                  <div class="fa-cart-row"><div class="fa-rest-name" style="width:35%;"></div><div class="fa-cart-amt" style="width:18%;"></div></div>
-                  <div class="fa-total-row"><span></span><strong></strong></div>
-                  <div class="fa-checkout"></div>
-                </div>
-              </div>
-              <span class="cs-screen-label">Checkout</span>
-            </div>
-          </div>
-
-          <!-- DESIGN SYSTEM – dummy -->
-          <h3 style="margin-top:56px; font-size:1.18rem;">Design System</h3>
+          <!-- DESIGN SYSTEM – real image -->
+          <h3 style="margin-top:48px; font-size:1.18rem;">Design System</h3>
           <p>A scalable, component-based design system ensures every screen stays consistent and future iterations ship faster. Built around reusable tokens covering colour, typography, spacing, elevation and interaction states.</p>
-
-          <div class="cs-ds-preview">
-            <div class="cs-ds-row">
-              <div class="cs-ds-col">
-                <span class="mono-tag">Colours</span>
-                <div class="cs-color-row">
-                  <span class="cs-swatch" style="background:#FF6B35;" title="Primary Orange"></span>
-                  <span class="cs-swatch" style="background:#E8421A;" title="Orange Dark"></span>
-                  <span class="cs-swatch" style="background:#1A1A2E;" title="Dark Navy"></span>
-                  <span class="cs-swatch" style="background:#F7C59F;" title="Peach"></span>
-                  <span class="cs-swatch" style="background:#F6F5F1;" title="Paper"></span>
-                </div>
-              </div>
-              <div class="cs-ds-col">
-                <span class="mono-tag">Typography</span>
-                <div class="cs-type-row">
-                  <span class="cs-t-display">Display 800</span>
-                  <span class="cs-t-body">Body Semibold</span>
-                  <span class="cs-t-label">Label Mono</span>
-                </div>
-              </div>
-              <div class="cs-ds-col">
-                <span class="mono-tag">Components</span>
-                <div class="cs-comp-row">
-                  <a class="btn btn-primary btn-sm" style="font-size:.76rem; padding:9px 18px; pointer-events:none; background:#FF6B35;">Order Now</a>
-                  <span class="skill-pill" style="font-size:.76rem; padding:9px 18px;">Category</span>
-                  <span class="tag-pill">New</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src="Slice_11.jpg" alt="Food Cafe complete design system — all screens" class="cs-img" loading="lazy">
         </section>
 
         <!-- RESULT -->
