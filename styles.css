@@ -267,6 +267,15 @@ strong{ font-weight:700; }
 }
 .hw{ color:inherit; transition:color .5s var(--ease); }
 .hw.lit{ color:var(--ink); }
+.hw-highlight.lit{
+  color:var(--cobalt);
+  background:var(--cobalt-soft);
+  border-radius:5px;
+  padding:1px 5px;
+  margin:0 -3px;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
 
 /* ---- hero bottom row ---- */
 .hero-bottom{
