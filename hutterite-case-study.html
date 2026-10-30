@@ -3,34 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hutterite E Commerce Platform — Case Study — Pasindu Madhushanka</title>
-<meta name="description" content="End-to-end UX and UI design for Hutterite, a community-based e-commerce platform — from discovery and research through to a scalable design system and high-fidelity UI.">
+<title>Hutterite Marketplace — Case Study — Pasindu Madhushanka</title>
+<meta name="description" content="UI/UX design for a Canadian multi-vendor marketplace connecting buyers with Hutterite colonies — storefront, vendor dashboard and design system.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-.cs-img{
-  width:100%; border-radius:var(--r-md); margin-top:28px; display:block;
-  border:1px solid var(--line); box-shadow:var(--shadow-sm); object-fit:contain;
-}
-.cs-hero-cover-img{
-  width:100%; border-radius:var(--r-lg); display:block;
-  margin-top:44px; box-shadow:var(--shadow-lg);
-  object-fit:cover; max-height:600px;
-}
-.cs-cover-placeholder{
-  width:100%; border-radius:var(--r-lg); display:block;
-  margin-top:44px; box-shadow:var(--shadow-lg);
-  min-height:420px;
-  background:linear-gradient(135deg,#0f0f1a 0%,#1e2140 50%,#2A33E0 100%);
-  position:relative; overflow:hidden;
-}
-.cs-cover-placeholder::before{
-  content:''; position:absolute; inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,.07) 1.2px,transparent 1.4px);
-  background-size:22px 22px;
-}
 .cs-outcome-list{ margin-top:24px; display:flex; flex-direction:column; gap:10px; }
 .cs-outcome-item{
   display:flex; align-items:flex-start; gap:14px; padding:14px 18px;
@@ -40,7 +19,22 @@
 .cs-future-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
 .cs-future-item{ padding:16px 20px; border:1px solid var(--line); border-radius:var(--r-md); font-size:.92rem; color:var(--ink-2); display:flex; align-items:flex-start; gap:10px; }
 .cs-future-item .fi-num{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-3); flex-shrink:0; }
-@media(max-width:640px){ .cs-future-grid{ grid-template-columns:1fr; } }
+.cs-two-col{ display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px; }
+.cs-two-col .pain-grid{ margin-top:0; }
+.cs-label{ display:block; font-family:'IBM Plex Mono',monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); margin-bottom:12px; }
+.cs-challenge-group{ }
+.cs-quote-block{
+  border-left:3px solid var(--cobalt); padding:20px 24px;
+  background:var(--cobalt-soft); border-radius:0 var(--r-md) var(--r-md) 0;
+  margin-top:32px;
+}
+.cs-quote-block p{ font-family:'Bricolage Grotesque',sans-serif; font-weight:600; font-size:1.08rem; color:var(--ink); max-width:none; margin-top:0; line-height:1.5; }
+.cs-scope-pills{ display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+.cs-scope-pill{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; padding:7px 14px; border:1px solid var(--line); border-radius:var(--r-pill); color:var(--ink-2); letter-spacing:.04em; }
+@media(max-width:768px){
+  .cs-two-col{ grid-template-columns:1fr; }
+  .cs-future-grid{ grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
@@ -84,29 +78,27 @@
       <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
         <a href="index.html">Home</a><span>/</span>
         <a href="index.html#work">Work</a><span>/</span>
-        <span class="current">Hutterite E Commerce Platform</span>
+        <span class="current">Hutterite Marketplace</span>
       </nav>
 
       <div class="case-tags" data-reveal data-delay="80">
+        <span class="tag-pill">Multi-vendor Marketplace</span>
         <span class="tag-pill">E-Commerce</span>
         <span class="tag-pill">Web Platform</span>
-        <span class="tag-pill">Design System</span>
-        <span class="tag-pill">2024</span>
+        <span class="tag-pill">Canada</span>
       </div>
 
-      <h1 data-reveal data-delay="140">Hutterite — designing a community-first e-commerce experience</h1>
-      <p class="sub" data-reveal data-delay="200">A comprehensive web e-commerce platform built for a unique community brand — from research and information architecture through to a scalable design system and high-fidelity UI.</p>
+      <h1 data-reveal data-delay="140">Hutterite Marketplace — a community-driven marketplace connecting colonies with buyers</h1>
+      <p class="sub" data-reveal data-delay="200">UI/UX design for a Canadian multi-vendor marketplace and its vendor dashboard — covering research, information architecture, design system and high-fidelity UI across both buyer and seller experiences.</p>
 
       <div class="meta-grid" data-reveal data-delay="240">
-        <div class="meta-item"><div class="label">Project Type</div><div class="value">E-Commerce Web Platform</div></div>
-        <div class="meta-item"><div class="label">My Role</div><div class="value">Lead UX Designer, UI Designer</div></div>
-        <div class="meta-item"><div class="label">Timeline</div><div class="value">2024</div></div>
+        <div class="meta-item"><div class="label">Project Type</div><div class="value">Multi-vendor E-Commerce Marketplace</div></div>
+        <div class="meta-item"><div class="label">Role</div><div class="value">UI/UX Designer</div></div>
+        <div class="meta-item"><div class="label">Platform</div><div class="value">WordPress · WooCommerce · Elementor</div></div>
         <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, FigJam, Notion</div></div>
       </div>
 
-      <div class="case-cover" data-reveal data-delay="120">
-        <div class="cs-cover-placeholder"></div>
-      </div>
+
 
     </div>
   </section>
@@ -125,79 +117,112 @@
 
       <div class="case-content">
 
+        <!-- OVERVIEW -->
         <section id="overview" data-reveal>
           <p class="mono-tag">Overview</p>
-          <h2>A commerce platform built around community identity</h2>
-          <p>Hutterite is an e-commerce platform serving a distinctive community brand. The project required designing an experience that balanced the community's unique cultural identity with the usability standards modern shoppers expect — making it easy to browse, discover and purchase products while feeling native to the brand's values.</p>
-          <p>The scope covered the full UX and UI lifecycle: from competitor research and user interviews through to a production-ready design system and high-fidelity interface.</p>
-          <div class="pain-grid" style="margin-top:28px;">
-            <div class="pain-card"><span class="num">01</span><p>Community customers who value authentic, brand-aligned shopping experiences above speed.</p></div>
-            <div class="pain-card"><span class="num">02</span><p>First-time visitors discovering the brand who need fast, clear product storytelling.</p></div>
-            <div class="pain-card"><span class="num">03</span><p>Repeat buyers who expect a reliable, low-friction checkout every time.</p></div>
+          <h2>Two products, one design system — buyer storefront and vendor dashboard</h2>
+          <p>Hutterite Marketplace is a Canadian multi-vendor marketplace that connects buyers directly with Hutterite colonies and local businesses. It covers farm-fresh produce, meat and eggs, handcrafted goods, farm and industrial equipment, building materials, and skilled trade services such as welding, roofing and custom builds.</p>
+          <p>I designed the UI/UX for two connected products: the buyer-facing e-commerce storefront, where customers browse, compare, order and request quotes — and the vendor dashboard, where colonies and businesses manage products, orders and enquiries with full CRUD.</p>
+
+          <h3 style="margin-top:40px; font-size:1.18rem;">Scope of work</h3>
+          <div class="cs-scope-pills">
+            <span class="cs-scope-pill">User Research</span>
+            <span class="cs-scope-pill">Information Architecture</span>
+            <span class="cs-scope-pill">Wireframing</span>
+            <span class="cs-scope-pill">UI Design</span>
+            <span class="cs-scope-pill">Design System</span>
+            <span class="cs-scope-pill">Prototyping</span>
+            <span class="cs-scope-pill">Responsive Web</span>
+            <span class="cs-scope-pill">Vendor Dashboard (CRUD)</span>
           </div>
         </section>
 
+        <!-- PROBLEM -->
         <section id="problem" data-reveal>
           <p class="mono-tag">Problem</p>
-          <h2>Generic e-commerce templates were eroding the brand</h2>
-          <p>The existing platform felt indistinguishable from any off-the-shelf store. It lacked visual personality, had an inconsistent information hierarchy across pages, and the checkout flow caused measurable drop-off at the payment step. Users reported confusion about product availability, shipping policies and order status.</p>
-          <div class="pain-grid">
-            <div class="pain-card"><span class="num">01</span><p>Visual identity mismatch — the interface looked generic and failed to reflect the community brand.</p></div>
-            <div class="pain-card"><span class="num">02</span><p>Product pages lacked hierarchy — customers struggled to find key details before deciding to buy.</p></div>
-            <div class="pain-card"><span class="num">03</span><p>Checkout drop-off — payment and shipping steps were unclear, causing abandoned carts.</p></div>
+          <h2>Real friction on both sides of the marketplace</h2>
+          <p>Hutterite colonies produce high-quality goods and skilled services, but selling them beyond local pickup and word of mouth is hard. The marketplace had to solve distinct problems on both sides.</p>
+
+          <div style="margin-top:32px;">
+            <span class="cs-label">Buyer challenges</span>
+            <div class="pain-grid" style="grid-template-columns:repeat(2,1fr);">
+              <div class="pain-card"><span class="num">01</span><p>A huge, mixed catalogue — about 317 products across 14 departments, from pumpkins to marine dock equipment, plus services and wholesale. Without strong structure, shoppers feel lost.</p></div>
+              <div class="pain-card"><span class="num">02</span><p>Trust — buyers needed to know who they were buying from and that the seller was a real, verified colony or business.</p></div>
+              <div class="pain-card"><span class="num">03</span><p>Location-dependent perishables — fresh food is only delivered in select cities (Edmonton, Calgary, Red Deer and others), so showing items a buyer can't receive causes frustration.</p></div>
+              <div class="pain-card"><span class="num">04</span><p>Not everything is "add to cart" — services and custom work need quotes, and some buyers need items nobody lists yet.</p></div>
+            </div>
           </div>
-          <h3 style="margin-top:44px; font-size:1.18rem;">Research findings</h3>
-          <div class="cs-outcome-list">
-            <div class="cs-outcome-item">Brand trust is established through visual consistency — users expected the store to look and feel as distinctive as the products.</div>
-            <div class="cs-outcome-item">Product storytelling matters — customers want to know the origin and values behind what they're buying.</div>
-            <div class="cs-outcome-item">Checkout clarity directly impacts conversion — transparency on price, shipping and delivery timeline reduces abandonment.</div>
-            <div class="cs-outcome-item">Mobile-first experience is non-negotiable — over 65% of traffic came from mobile devices.</div>
+
+          <div style="margin-top:32px;">
+            <span class="cs-label">Vendor challenges</span>
+            <div class="pain-grid">
+              <div class="pain-card"><span class="num">05</span><p>Low digital confidence — many colony users aren't professional e-commerce operators, so a complex admin panel would mean abandoned listings and missed orders.</p></div>
+              <div class="pain-card"><span class="num">06</span><p>Multiple departments per colony — a single colony may run carpentry, market garden, poultry and metalwork shops, each needing its own enquiries and stock.</p></div>
+              <div class="pain-card"><span class="num">07</span><p>Operational load — vendors need to create listings, track orders, update stock and handle quotes without training.</p></div>
+            </div>
+          </div>
+
+          <div class="cs-quote-block">
+            <p>How might we make a complex multi-vendor marketplace feel simple, trustworthy and local for buyers — while giving vendors a dashboard they can use confidently from day one?</p>
           </div>
         </section>
 
+        <!-- PROCESS -->
         <section id="process-cs" data-reveal>
           <p class="mono-tag">Process</p>
-          <h2>Discovery to high-fidelity in four structured phases</h2>
+          <h2>Six phases from discovery to high-fidelity</h2>
+
           <div class="timeline">
             <div class="step" data-reveal>
-              <span class="step-num">01 — Research</span>
-              <h4>Competitor audit &amp; user interviews</h4>
-              <p>Reviewed six competitor e-commerce platforms and ran stakeholder and user interviews to map the shopping journey and surface key drop-off points.</p>
+              <span class="step-num">01 — Research &amp; Discovery</span>
+              <h4>Audit both user groups</h4>
+              <p>Audited the business model and both user groups — buyers (households, farms, contractors, wholesale) and sellers (colonies, local businesses). Benchmarked marketplaces and B2B grocery platforms for navigation, filtering and vendor tooling. Mapped the full product range, delivery rules and order flows to find where the experience could break.</p>
             </div>
             <div class="step" data-reveal>
-              <span class="step-num">02 — Define</span>
-              <h4>Information architecture &amp; user flows</h4>
-              <p>Mapped the full site structure and key user flows: product discovery, product detail, cart and checkout — ensuring every path was clear and decision points were minimised.</p>
+              <span class="step-num">02 — Personas &amp; User Flows</span>
+              <h4>Map every buying intent</h4>
+              <p>Created personas for the city household buyer, the farmer sourcing equipment, the wholesale buyer and the colony manager. Mapped key flows: browse → set location → add to cart → checkout; post a request → receive offers → accept; vendor adds a product → receives an order → fulfils it.</p>
             </div>
             <div class="step" data-reveal>
-              <span class="step-num">03 — Design</span>
-              <h4>Wireframes → design system → high-fidelity</h4>
-              <p>Lo-fi wireframes validated the layout logic. A comprehensive design system was built first, then high-fidelity screens were produced page by page in Figma.</p>
+              <span class="step-num">03 — Information Architecture</span>
+              <h4>Three clear entry points</h4>
+              <p>Organised the catalogue into shop by department, shop by colony or business, and services. Designed a mega-menu with category counts and thumbnails. Created a delivery-location selector so availability is set once and applied everywhere across the experience.</p>
             </div>
             <div class="step" data-reveal>
-              <span class="step-num">04 — Validate</span>
-              <h4>Usability testing &amp; iteration</h4>
-              <p>Two rounds of moderated usability testing refined the product page layout and the three-step checkout flow before final sign-off.</p>
+              <span class="step-num">04 — Wireframes → UI Design</span>
+              <h4>Low-fi to high-fidelity</h4>
+              <p>Started with low-fidelity wireframes of the home page, product listing, product detail, cart and dashboard screens. Built a design system with colours, typography, product cards, status badges and form patterns so the storefront and dashboard feel like one product across all responsive breakpoints.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">05 — Dashboard Design (CRUD)</span>
+              <h4>Designed for non-technical vendors</h4>
+              <p>Create: a simple product form with variants, price ranges, images, stock and category. Read: an order list with status filters and search. Update: quick edits without leaving the list. Delete/archive: confirmation dialogs and safe alternatives to permanent deletion. Used plain language, clear empty states and inline validation throughout.</p>
+            </div>
+            <div class="step" data-reveal>
+              <span class="step-num">06 — Prototype &amp; Iterate</span>
+              <h4>Test and refine key flows</h4>
+              <p>Built clickable prototypes of the key buyer and vendor flows in Figma, tested them, and refined the designs based on the feedback received.</p>
             </div>
           </div>
         </section>
 
+        <!-- SOLUTION -->
         <section id="solution" data-reveal>
           <p class="mono-tag">Solution</p>
-          <h2>Four design directions that shaped every page</h2>
+          <h2>Two experiences, built as one product</h2>
 
           <div class="feature-row">
             <div class="feature-copy">
               <span class="num">01</span>
-              <h3>Brand-led visual identity throughout</h3>
-              <p>Every page uses a consistent colour system, typography scale and imagery style drawn directly from the brand guidelines — making the store feel native to the community.</p>
+              <h3>Location-first shopping</h3>
+              <p>A "Choose location" control sets delivery once and shows fresh-delivery cities, so buyers only ever see what they can actually receive. Perishable frustration — gone from the first interaction.</p>
             </div>
             <div class="feature-visual">
               <div class="mock-app">
-                <div class="mock-bar" style="background:var(--cobalt);"></div>
+                <div class="mock-bar" style="background:var(--amber); width:55%;"></div>
                 <div class="mock-line w-80"></div>
                 <div class="mock-line w-60"></div>
-                <div class="mock-btn"></div>
+                <div class="mock-btn" style="background:var(--amber); width:48%;"></div>
               </div>
             </div>
           </div>
@@ -205,12 +230,17 @@
           <div class="feature-row is-rev">
             <div class="feature-copy">
               <span class="num">02</span>
-              <h3>Product pages built around the decision moment</h3>
-              <p>Key information — product name, price, availability and shipping estimate — sits above the fold on every product page. Supporting content follows in a scannable hierarchy below.</p>
+              <h3>Department-led navigation</h3>
+              <p>Image-based department tiles with item counts and a searchable filter make a 300+ item catalogue easy to scan. The mega-menu shows category shape before a user clicks — reducing pogo-sticking between the home page and product lists.</p>
             </div>
             <div class="feature-visual">
               <div class="mock-app">
-                <div class="mock-row"><div class="mock-chart"><i style="height:35%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:65%"></i></div></div>
+                <div class="mock-row"><div class="mock-chart">
+                  <i style="height:40%; background:var(--amber-soft);"></i>
+                  <i style="height:75%; background:var(--amber);"></i>
+                  <i style="height:55%; background:var(--amber-soft);"></i>
+                  <i style="height:65%; background:var(--amber);"></i>
+                </div></div>
                 <div class="mock-line w-60" style="margin-top:18px;"></div>
                 <div class="mock-line w-40"></div>
               </div>
@@ -220,15 +250,15 @@
           <div class="feature-row">
             <div class="feature-copy">
               <span class="num">03</span>
-              <h3>Three-step checkout with full transparency</h3>
-              <p>Cart review, address and payment, and order confirmation are three clearly separated steps. Running totals, shipping costs and delivery estimates are visible at every stage.</p>
+              <h3>Trust built into every card</h3>
+              <p>Every product card shows the colony name. The home page carries the statement "Every seller is a real colony or local business, verified by us." Dedicated colony pages and a map directory make the people behind each product visible — converting first-time visitors into confident buyers.</p>
             </div>
             <div class="feature-visual">
               <div class="mock-app">
+                <div class="mock-bar" style="background:var(--cobalt); width:34%;"></div>
                 <div class="mock-line w-80"></div>
                 <div class="mock-line w-60"></div>
-                <div class="mock-line w-40"></div>
-                <div class="mock-btn" style="margin-top:20px;"></div>
+                <div class="mock-btn"></div>
               </div>
             </div>
           </div>
@@ -236,45 +266,71 @@
           <div class="feature-row is-rev">
             <div class="feature-copy">
               <span class="num">04</span>
-              <h3>Mobile-first responsive system</h3>
-              <p>Every component was designed mobile-first and tested across four breakpoints. Navigation, product grids and checkout adapt cleanly from 375px to 1440px.</p>
+              <h3>Beyond add-to-cart</h3>
+              <p>Quote buttons for trades and services, a Post a Request feature where colonies send offers, live auctions, and a wholesale/B2B entry point serve every buying intent — not just the straightforward purchase.</p>
+            </div>
+            <div class="feature-visual">
+              <div class="mock-app">
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-btn" style="background:var(--amber); width:58%;"></div>
+                <div class="mock-btn" style="background:transparent; border:1.5px solid var(--line); margin-top:10px; width:58%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-copy">
+              <span class="num">05</span>
+              <h3>Vendor dashboard designed for day one</h3>
+              <p>A focused dashboard where colonies create, view, edit and delete products and manage orders from one place. Department-aware structure routes enquiries to the right shop. Simple, forgiving forms and clear status labels are designed for non-technical users.</p>
             </div>
             <div class="feature-visual">
               <div class="mock-app">
                 <div class="mock-bar" style="width:45%;"></div>
                 <div class="mock-line w-80"></div>
-                <div class="mock-btn" style="margin-top:18px; width:55%;"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-line w-40"></div>
+                <div class="mock-btn" style="margin-top:14px; width:60%;"></div>
               </div>
             </div>
           </div>
+
+          <h3 style="margin-top:56px; font-size:1.18rem;">Design approach</h3>
+          <p>A warm, community-driven look with strong photography and a clean, scannable layout — so a large catalogue feels approachable rather than overwhelming. One design system covering the storefront, vendor dashboard and service flows ensures both experiences feel like one product, not two bolted together.</p>
+
+          <div class="cs-outcome-list">
+            <div class="cs-outcome-item">A warm, community-driven look with strong photography and a clean, scannable layout.</div>
+            <div class="cs-outcome-item">Clear product cards — price or price range, sale %, stock state and one-tap "Add to cart" or "Choose options" — reduce hesitation at the point of decision.</div>
+            <div class="cs-outcome-item">Reassurance at key moments: secure checkout, direct-from-colony messaging and pickup/delivery notes sit exactly where buyers need them.</div>
+          </div>
         </section>
 
+        <!-- RESULT -->
         <section id="result" data-reveal>
           <p class="mono-tag">Result</p>
-          <h2>Outcomes &amp; what the work delivered</h2>
+          <h2>A live marketplace used by colonies across Canada</h2>
+
           <div class="result-stats">
-            <div class="result-stat"><strong data-count="35" data-suffix="%">0</strong><span>Reduction in checkout abandonment after the flow redesign</span></div>
-            <div class="result-stat"><strong data-count="4.4" data-suffix=" / 5">0</strong><span>Average usability score in testing across both rounds</span></div>
-            <div class="result-stat"><strong data-count="100" data-suffix="%">0</strong><span>Client satisfaction — signed off on first full review</span></div>
+            <div class="result-stat"><strong data-count="103" data-suffix="">0</strong><span>Verified sellers — 87 Hutterite colonies and 16 local businesses on the platform</span></div>
+            <div class="result-stat"><strong data-count="317" data-suffix="+">0</strong><span>Products listed across 14 departments, from fresh produce to industrial equipment</span></div>
+            <div class="result-stat"><strong data-count="144" data-suffix="">0</strong><span>Services listed — skilled trades including welding, roofing and custom builds</span></div>
           </div>
 
-          <h3 style="margin-top:48px; font-size:1.18rem;">What the final design delivered</h3>
+          <h3 style="margin-top:48px; font-size:1.18rem;">What the design delivered</h3>
           <div class="cs-outcome-list">
-            <div class="cs-outcome-item">A brand-led visual identity that made the store feel native to the community and its values.</div>
-            <div class="cs-outcome-item">Clear product page hierarchy that reduced time-to-decision and improved conversion.</div>
-            <div class="cs-outcome-item">A transparent three-step checkout that reduced friction and cut abandonment at the payment step.</div>
-            <div class="cs-outcome-item">A scalable design system the development team could build from directly without design support.</div>
-            <div class="cs-outcome-item">A fully responsive interface tested across all major breakpoints and device types.</div>
+            <div class="cs-outcome-item">A live, working marketplace covering two full user experiences — buyer storefront and vendor dashboard — built as one cohesive product.</div>
+            <div class="cs-outcome-item">One design system covering the storefront, vendor dashboard and service flows, so every screen speaks the same visual language.</div>
+            <div class="cs-outcome-item">A scalable information architecture that makes 317+ products across 14 departments easy to browse, filter and find.</div>
+            <div class="cs-outcome-item">A location-first delivery system that eliminates the frustration of showing buyers products they can't receive.</div>
+            <div class="cs-outcome-item">A vendor CRUD dashboard designed so non-technical colony users can create, edit and manage listings and orders with confidence.</div>
           </div>
 
-          <h3 style="margin-top:48px; font-size:1.18rem;">Future improvements</h3>
-          <div class="cs-future-grid">
-            <div class="cs-future-item"><span class="fi-num">01</span>Personalised product recommendations based on browse history</div>
-            <div class="cs-future-item"><span class="fi-num">02</span>Wishlist and saved items for returning customers</div>
-            <div class="cs-future-item"><span class="fi-num">03</span>Live order tracking with status notifications</div>
-            <div class="cs-future-item"><span class="fi-num">04</span>Customer reviews and verified purchase ratings</div>
-            <div class="cs-future-item"><span class="fi-num">05</span>Multi-currency and international shipping support</div>
-            <div class="cs-future-item"><span class="fi-num">06</span>Loyalty programme and member-exclusive pricing</div>
+          <h3 style="margin-top:48px; font-size:1.18rem;">Key learnings</h3>
+          <div class="cs-outcome-list">
+            <div class="cs-outcome-item">With a large catalogue, strong information architecture matters more than visual polish.</div>
+            <div class="cs-outcome-item">Designing for less technical vendors means fewer fields, plain language and forgiving flows.</div>
+            <div class="cs-outcome-item">Trust signals such as real seller identity and clear delivery rules are what turn first-time visitors into buyers.</div>
           </div>
         </section>
 
@@ -341,6 +397,9 @@
             </a>
             <a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
+            </a>
+            <a href="https://www.instagram.com/pasindu_uiux/" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
             </a>
           </div>
         </div>
