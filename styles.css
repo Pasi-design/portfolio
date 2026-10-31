@@ -441,6 +441,22 @@ strong{ font-weight:700; }
   background:linear-gradient(135deg,#0f0f1a 0%,#1e2140 45%,#2A33E0 100%);
   filter:blur(5px);
 }
+.hut-blur-img{
+  position:absolute; top:-12px; left:-12px;
+  width:calc(100% + 24px); height:calc(100% + 24px);
+  object-fit:cover; object-position:top center;
+  filter:blur(7px) brightness(.7);
+  transition:transform .8s var(--ease);
+}
+.project-card:hover .hut-blur-img{ transform:scale(1.05); }
+.work-grid .project-card{ display:flex; flex-direction:column; }
+.work-grid .project-info{ flex:1; display:flex; flex-direction:column; }
+.work-grid .project-meta-row{ margin-top:auto; padding-top:20px; }
+.project-credit{
+  display:block; margin-top:12px;
+  font-family:'IBM Plex Mono',monospace; font-size:.7rem;
+  letter-spacing:.02em; color:var(--ink-2);
+}
 .hut-overlay{
   position:absolute; inset:0; z-index:2;
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;

@@ -10,6 +10,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
+.case-hero-grid{ display:grid; grid-template-columns:1.02fr .98fr; gap:56px; align-items:center; }
+.case-hero-copy h1{ max-width:none; font-size:clamp(2rem,3.5vw,3.1rem); }
+.case-hero-visual{ position:relative; }
+.hut-canvas{ min-height:0; padding:30px; }
+.browser-mock{
+  width:100%; background:#fff; border-radius:12px; overflow:hidden;
+  border:1px solid var(--line); box-shadow:var(--shadow-lg);
+}
+.browser-bar{
+  display:flex; align-items:center; gap:6px; padding:9px 12px;
+  background:var(--paper-2); border-bottom:1px solid var(--line);
+}
+.b-dot{ width:8px; height:8px; border-radius:50%; background:var(--paper-3); flex-shrink:0; }
+.b-url{
+  margin-left:10px; flex:1; max-width:62%; text-align:center;
+  font-family:'IBM Plex Mono',monospace; font-size:.62rem; letter-spacing:.04em;
+  color:var(--ink-3); background:#fff; border-radius:var(--r-pill); padding:3px 12px;
+}
+.browser-shot{ display:block; width:100%; height:auto; }
+.hero-credit{
+  margin-top:16px; font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem; letter-spacing:.02em; color:var(--ink-2);
+}
+@media(max-width:980px){
+  .case-hero-grid{ grid-template-columns:1fr; gap:40px; }
+  .hut-canvas{ padding:20px; }
+}
+@media(max-width:640px){ .hut-canvas{ padding:14px; } }
 .cs-outcome-list{ margin-top:24px; display:flex; flex-direction:column; gap:10px; }
 .cs-outcome-item{
   display:flex; align-items:flex-start; gap:14px; padding:14px 18px;
@@ -75,6 +103,8 @@
   <section class="case-hero">
     <div class="container">
 
+      <div class="case-hero-grid">
+        <div class="case-hero-copy">
       <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
         <a href="index.html">Home</a><span>/</span>
         <a href="index.html#work">Work</a><span>/</span>
@@ -90,6 +120,23 @@
 
       <h1 data-reveal data-delay="140">Hutterite Marketplace — a community-driven marketplace connecting colonies with buyers</h1>
       <p class="sub" data-reveal data-delay="200">UI/UX design for a Canadian multi-vendor marketplace and its vendor dashboard — covering research, information architecture, design system and high-fidelity UI across both buyer and seller experiences.</p>
+        </div>
+
+        <div class="case-hero-visual" data-reveal data-delay="160">
+          <div class="hero-canvas hut-canvas">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="b-url">Hutterite Marketplace</span>
+              </div>
+              <img src="Hutterite_Marketplace.jpg" alt="Hutterite Marketplace home page design" class="browser-shot">
+            </div>
+            <span class="spec-chip chip-1">317+ products</span>
+            <span class="spec-chip chip-4">144 services</span>
+          </div>
+          <p class="hero-credit">Company Credit — Digital Chipmunks</p>
+        </div>
+      </div>
 
       <div class="meta-grid" data-reveal data-delay="240">
         <div class="meta-item"><div class="label">Project Type</div><div class="value">Multi-vendor E-Commerce Marketplace</div></div>
