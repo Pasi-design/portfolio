@@ -583,6 +583,7 @@ strong{ font-weight:700; }
   font-size:clamp(1.35rem,2.1vw,1.7rem); line-height:1.15; letter-spacing:-0.015em;
   color:var(--on-dark); margin-top:12px; max-width:30ch;
 }
+.neon-title--long{ font-size:clamp(1.2rem,1.7vw,1.45rem); line-height:1.25; max-width:34ch; }
 .neon-desc{
   margin-top:10px; max-width:44ch;
   font-size:.95rem; line-height:1.55; color:var(--on-dark-dim);
