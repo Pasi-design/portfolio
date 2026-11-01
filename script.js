@@ -277,7 +277,14 @@
       if(pwInput){ pwInput.value=''; pwInput.classList.remove('is-error'); }
       if(pwError) pwError.textContent='';
     }
-    hutCard.addEventListener('click', function(e){ e.preventDefault(); openPW(); });
+    hutCard.addEventListener('click', function(e){
+      if(e.target.closest('.hut-visit')) return;   // live-site link opens normally, no password
+      e.preventDefault(); openPW();
+    });
+    hutCard.addEventListener('keydown', function(e){
+      if(e.target !== hutCard) return;
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openPW(); }
+    });
     if(pwClose) pwClose.addEventListener('click', closePW);
     if(pwBack)  pwBack.addEventListener('click', closePW);
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePW(); });
