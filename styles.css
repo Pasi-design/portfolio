@@ -851,6 +851,7 @@ html.has-cursor .hut-card{ cursor:none; }
 
 @media (max-width:980px){
   .skills-bento{ grid-template-columns:repeat(2,1fr); }
+  .skill-cell--solo{ grid-column:span 2; }
 }
 @media (max-width:768px){
   .skill-card--full{ flex-direction:column; align-items:stretch; gap:0; }
@@ -858,7 +859,7 @@ html.has-cursor .hut-card{ cursor:none; }
 }
 @media (max-width:640px){
   .skills-bento{ grid-template-columns:1fr; }
-  .skill-cell--wide,.skill-cell--full{ grid-column:auto; }
+  .skill-cell--wide,.skill-cell--full,.skill-cell--solo{ grid-column:auto; }
 }
 
 /* ---------- skills ---------- */
