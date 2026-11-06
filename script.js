@@ -279,11 +279,11 @@
     }
     hutCard.addEventListener('click', function(e){
       if(e.target.closest('.hut-visit')) return;   // live-site link opens normally, no password
-      e.preventDefault(); window.location.href = 'hutterite-case-study.html';
+      e.preventDefault(); openPW();
     });
     hutCard.addEventListener('keydown', function(e){
       if(e.target !== hutCard) return;
-      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); window.location.href = 'hutterite-case-study.html'; }
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openPW(); }
     });
     if(pwClose) pwClose.addEventListener('click', closePW);
     if(pwBack)  pwBack.addEventListener('click', closePW);
@@ -305,6 +305,26 @@
       if(e.key==='Enter') tryPassword();
       else { pwInput.classList.remove('is-error'); pwError.textContent=''; }
     });
+  }
+
+  /* ---------------- scale neon-card visuals to their card width ---------------- */
+  var nvVisuals = document.querySelectorAll('.neon-visual');
+  if(nvVisuals.length){
+    var NV_W = 567, NV_H = 290;
+    var nvFit = function(v){
+      var w = v.clientWidth; if(!w) return;
+      var sc = Math.min(1, w / NV_W);
+      v.style.setProperty('--nv-s', sc.toFixed(4));
+      v.style.setProperty('--nv-h', Math.round(NV_H * sc) + 'px');
+      v.style.setProperty('--nv-x', Math.round((w - NV_W * sc) / 2) + 'px');
+    };
+    nvVisuals.forEach(nvFit);
+    if('ResizeObserver' in window){
+      var nvRO = new ResizeObserver(function(entries){ entries.forEach(function(en){ nvFit(en.target); }); });
+      nvVisuals.forEach(function(v){ nvRO.observe(v); });
+    } else {
+      window.addEventListener('resize', function(){ nvVisuals.forEach(nvFit); });
+    }
   }
 
 })();
