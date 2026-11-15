@@ -279,11 +279,11 @@
     }
     hutCard.addEventListener('click', function(e){
       if(e.target.closest('.hut-visit')) return;   // live-site link opens normally, no password
-      e.preventDefault(); window.location.href = 'hutterite-case-study.html';
+      e.preventDefault(); openPW();
     });
     hutCard.addEventListener('keydown', function(e){
       if(e.target !== hutCard) return;
-      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); window.location.href = 'hutterite-case-study.html'; }
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openPW(); }
     });
     if(pwClose) pwClose.addEventListener('click', closePW);
     if(pwBack)  pwBack.addEventListener('click', closePW);
@@ -326,5 +326,28 @@
       window.addEventListener('resize', function(){ nvVisuals.forEach(nvFit); });
     }
   }
+
+  /* ---------------- work gallery filters (service pages) ---------------- */
+  document.querySelectorAll('[data-filter-group]').forEach(function(group){
+    var scope = document.querySelector(group.getAttribute('data-filter-group'));
+    if(!scope) return;
+    var btns = group.querySelectorAll('[data-filter]');
+    var items = scope.querySelectorAll('[data-cat]');
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var f = btn.getAttribute('data-filter');
+        btns.forEach(function(b){
+          var on = (b === btn);
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        items.forEach(function(it){
+          var show = (f === 'all' || it.getAttribute('data-cat') === f);
+          it.classList.toggle('is-hidden', !show);
+        });
+        scope.classList.toggle('is-filtered', f !== 'all');
+      });
+    });
+  });
 
 })();
