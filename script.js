@@ -350,4 +350,16 @@
     });
   });
 
+  /* ---------------- floating services dock ---------------- */
+  var floatNav = document.querySelector('.float-nav');
+  if(floatNav){
+    setTimeout(function(){ floatNav.classList.add('is-in'); }, reduceMotion ? 0 : 1400);
+    var dockFooter = document.querySelector('.footer');
+    if(dockFooter && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ floatNav.classList.toggle('is-away', en.isIntersecting); });
+      }, { threshold:0.05 }).observe(dockFooter);
+    }
+  }
+
 })();
