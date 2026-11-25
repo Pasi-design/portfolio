@@ -27,6 +27,15 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
+      <div class="site-preferences" aria-label="Display and sound preferences">
+        <button class="preference-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.7 8.7 0 1 0 20.2 15.1Z"/></svg>
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+        <button class="preference-btn" id="soundToggle" type="button" aria-label="Enable interface sounds" aria-pressed="false" title="Interface sounds off">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path class="sound-wave" d="M16 9a5 5 0 0 1 0 6m2.5-8.5a8.5 8.5 0 0 1 0 11"/></svg>
+        </button>
+      </div>
       <a class="btn btn-outline btn-sm" href="#contact" data-cursor="Talk">Let's talk</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -47,12 +56,11 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero hero--editorial">
     <div class="container">
-
       <div class="hero-identity" data-reveal>
         <div class="hero-id-photo">
-          <img src="portfo.png" alt="Pasindu Madhushanka">
+          <img src="profile-placeholder.svg" alt="Pasindu Madhushanka">
         </div>
         <div class="hero-id-content">
           <p class="eyebrow"><span class="dot"></span>Open to new projects &middot; 2026</p>
@@ -60,26 +68,40 @@
         </div>
       </div>
 
-      <p class="hero-intro" data-reveal data-delay="60"><span class="hw">Designing </span><span class="hw">clarity </span><span class="hw">into </span><span class="hw">complex </span><span class="hw">products </span><span class="hw">— </span><span class="hw">with </span><span class="hw">4+ </span><span class="hw">years </span><span class="hw">of </span><span class="hw hw-highlight">UI/UX </span><span class="hw hw-highlight">experience </span><span class="hw">turning </span><span class="hw">ideas, </span><span class="hw">research, </span><span class="hw">and </span><span class="hw">business </span><span class="hw">goals </span><span class="hw">into </span><span class="hw">intuitive </span><span class="hw">experiences </span><span class="hw">across </span><span class="hw">websites, </span><span class="hw">e- </span><span class="hw">Commerce, </span><span class="hw">and </span><span class="hw">SaaS, </span><span class="hw">while </span><span class="hw">using </span><span class="hw">AI </span><span class="hw">to </span><span class="hw">work </span><span class="hw">smarter, </span><span class="hw">iterate </span><span class="hw">faster, </span><span class="hw">and </span><span class="hw">create </span><span class="hw">better </span><span class="hw">design </span><span class="hw">outcomes.</span></p>
-
-      <div class="hero-bottom" data-reveal data-delay="100">
-        <div class="hero-actions">
-          <a class="btn btn-primary magnetic" href="#work" data-cursor="Scroll">
-            View my work
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-          <a class="btn btn-outline" href="https://drive.google.com/file/d/1VdgQORgM2LPT8e6ja7x3rPi8Fi56rS--/view?usp=sharing" download>
-            Download CV
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
-          </a>
+      <div class="hero-editorial-grid">
+        <div class="hero-editorial-copy">
+          <p class="hero-kicker" data-reveal><span class="hero-kicker-line"></span>Designing with purpose. Building with people in mind.</p>
+          <h1 class="hero-intro" data-reveal data-delay="70" aria-label="I turn complex ideas into digital experiences people love to use.">
+            <span class="hw">I turn </span><span class="hw">complex </span><span class="hw">ideas </span><span class="hw">into </span><span class="hw hw-highlight">digital </span><span class="hw hw-highlight">experiences </span><span class="hw">people </span><span class="hw">love </span><span class="hw">to </span><span class="hw">use.</span>
+          </h1>
+          <p class="hero-support" data-reveal data-delay="120">I’m Pasindu — a UI/UX designer with <strong>4+ years of experience</strong>, turning research, ideas and business goals into intuitive websites, web apps and SaaS products. I use AI to work smarter, iterate faster and create better design outcomes.</p>
+          <div class="hero-bottom" data-reveal data-delay="170">
+            <div class="hero-actions">
+              <a class="btn btn-primary magnetic" href="#work" data-cursor="Explore work">Explore my work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+              <a class="btn btn-outline" href="Pasindu-Madhushanka-CV.pdf">Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M5 19h14"/></svg></a>
+            </div>
+          </div>
+          <div class="hero-stats hero-stats--editorial" data-reveal data-delay="220">
+            <div class="stat"><strong data-count="4" data-suffix="+">0</strong><span>Years in practice</span></div>
+            <div class="stat"><strong data-count="30" data-suffix="+">0</strong><span>Products shipped</span></div>
+            <div class="stat"><strong data-count="12" data-suffix="+">0</strong><span>Industries explored</span></div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><strong data-count="4" data-suffix="+">0</strong><span>Years in practice</span></div>
-          <div class="stat"><strong data-count="30" data-suffix="+">0</strong><span>Products shipped</span></div>
-          <div class="stat"><strong data-count="12" data-suffix="+">0</strong><span>Industries explored</span></div>
+
+        <div class="hero-editorial-visual" data-reveal data-delay="140" aria-label="Selected product design work">
+          <div class="hero-visual-note"><span class="hero-note-dot"></span> A little of what I do <span class="hero-note-index">01 — 03</span></div>
+          <a class="hero-project hero-project--food" href="food-cafe-case-study.html" aria-label="Explore Food Cafe case study">
+            <img src="Food__2_.jpg" alt="Food Cafe mobile app interface presentation">
+            <span class="hero-project-caption"><span><small>Mobile product design</small><strong>Food Cafe</strong></span><i>↗</i></span>
+          </a>
+          <a class="hero-project hero-project--market" href="hutterite-case-study.html" aria-label="Explore Hutterite Marketplace case study">
+            <img src="Hutterite_Marketplace.jpg" alt="Hutterite Marketplace web experience">
+            <span class="hero-project-caption"><span><small>Marketplace experience</small><strong>Hutterite</strong></span><i>↗</i></span>
+          </a>
+          <div class="hero-visual-stamp"><span>UX</span><span>+</span><span>UI</span></div>
+          <div class="hero-scroll-cue"><span class="hero-scroll-line"></span><span>Scroll to explore</span></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -107,76 +129,48 @@
         <h2>What I bring to a project</h2>
         <p>From interface design to a live website — the skills I use most, in one place.</p>
       </div>
-      <div class="skills-bento">
-        <div class="skill-cell skill-cell--wide" data-reveal>
-          <article class="skill-card skill-card--feature">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span><span class="skill-idx">01</span></div>
-              <h3>Figma</h3>
-              <p>Interface design, prototyping and design systems.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">UI/UX</span><span class="skill-chip">Prototyping</span><span class="skill-chip">Design Systems</span></div>
-          </article>
-        </div>
-        <div class="skill-cell" data-reveal data-delay="80">
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></span><span class="skill-idx">02</span></div>
-              <h3>Graphic Design</h3>
-              <p>Visual and marketing graphics designed in Canva.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">Canva</span></div>
-          </article>
-        </div>
-        <div class="skill-cell" data-reveal>
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg></span><span class="skill-idx">03</span></div>
-              <h3>WordPress Development</h3>
-              <p>Responsive WordPress websites with clean UI and smooth navigation.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">WordPress</span><span class="skill-chip">Responsive</span></div>
-          </article>
-        </div>
-        <div class="skill-cell" data-reveal data-delay="80">
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span><span class="skill-idx">04</span></div>
-              <h3>Framer Development</h3>
-              <p>Websites and interactive pages built in Framer.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">Framer</span></div>
-          </article>
-        </div>
-        <div class="skill-cell" data-reveal data-delay="160">
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg></span><span class="skill-idx">05</span></div>
-              <h3>Video Editing</h3>
-              <p>Video editing with CapCut.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip skill-chip--hl">Intermediate</span><span class="skill-chip">CapCut</span></div>
-          </article>
-        </div>
-        <div class="skill-cell skill-cell--solo" data-reveal>
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span class="skill-idx">06</span></div>
-              <h3>Digital Marketing</h3>
-              <p>Digital marketing experience, from designing posts to reaching the right audience on Meta.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">Meta Campaigns</span><span class="skill-chip">Post Design</span><span class="skill-chip">Audience Targeting</span></div>
-          </article>
-        </div>
-        <div class="skill-cell skill-cell--wide" data-reveal data-delay="80">
-          <article class="skill-card">
-            <div class="skill-main">
-              <div class="skill-top"><span class="skill-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span><span class="skill-idx">07</span></div>
-              <h3>HTML, CSS &amp; Coding</h3>
-              <p>Working knowledge of HTML, CSS and coding, built and sped up with Claude and ChatGPT.</p>
-            </div>
-            <div class="skill-chips"><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">SEO</span><span class="skill-chip">Keywords</span><span class="skill-chip skill-chip--hl">Claude</span><span class="skill-chip skill-chip--hl">ChatGPT</span></div>
-          </article>
+      <div class="skills-stage" id="skillsStage">
+        <button type="button" class="skills-trigger" id="skillsTrigger" aria-expanded="false" aria-controls="skillsReveal">
+          <span class="st-inner">
+            <span class="st-copy">
+              <span class="neon-tag">Skill set</span>
+              <span class="st-title">Explore my core capabilities</span>
+              <span class="st-sub">Three core disciplines. A versatile set of skills.</span>
+              <span class="st-hint"><span class="st-hint-open">Hover or tap</span><span class="st-hint-close">Tap to hide</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14m0 0-5-5m5 5 5-5"/></svg></span>
+            </span>
+            <span class="st-orbit" aria-hidden="true">
+              <span class="orbit">
+                <span class="orbit-ring orbit-ring--in"></span>
+                <span class="orbit-ring orbit-ring--out"></span>
+                <span class="orbit-core"><em>Skills</em></span>
+                <span class="orb-ico orb-in" style="--p:0%; --d:-0s;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span><span class="orb-ico orb-in" style="--p:33%; --d:-7s;"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></span><span class="orb-ico orb-in" style="--p:66%; --d:-14s;"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg></span><span class="orb-ico orb-out" style="--p:0%; --d:-0s;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg></span><span class="orb-ico orb-out" style="--p:25%; --d:-8.5s;"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg></span><span class="orb-ico orb-out" style="--p:50%; --d:-17s;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span class="orb-ico orb-out" style="--p:75%; --d:-25.5s;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span>
+              </span>
+            </span>
+          </span>
+        </button>
+        <div class="skills-reveal" id="skillsReveal">
+          <div class="skills-reveal-inner">
+            <div class="skills-bento skills-bento--groups">
+<article class="skill-group skill-group--design" style="--i:0">
+<div class="skill-group-top"><span class="skill-group-icon"><svg viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span><span class="skill-group-index">01 / DESIGN</span></div>
+<p class="skill-group-kicker">Think · Shape · Create</p><h3>Product &amp; UI/UX Design</h3>
+<p class="skill-group-description">Turning ideas into clear, useful and engaging digital experiences — from early concepts to polished interfaces.</p>
+<div class="skill-group-tags"><span class="skill-group-tag skill-group-tag--primary">Figma</span><span class="skill-group-tag">UI/UX Design</span><span class="skill-group-tag">Prototyping</span><span class="skill-group-tag">Design Systems</span><span class="skill-group-tag">Graphic Design</span><span class="skill-group-tag">Canva</span></div>
+</article>
+<article class="skill-group skill-group--build" style="--i:1">
+<div class="skill-group-top"><span class="skill-group-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11M16 9v11"/><path d="m10 14 2 2 2-2"/></svg></span><span class="skill-group-index">02 / BUILD</span></div>
+<p class="skill-group-kicker">Design · Develop · Launch</p><h3>Web Development</h3>
+<p class="skill-group-description">Building responsive websites and interactive pages with a focus on usability, clean layouts and smooth navigation.</p>
+<div class="skill-group-tags"><span class="skill-group-tag skill-group-tag--primary">WordPress</span><span class="skill-group-tag skill-group-tag--primary">Framer</span><span class="skill-group-tag">HTML</span><span class="skill-group-tag">CSS</span><span class="skill-group-tag">Responsive Design</span><span class="skill-group-tag">Claude</span><span class="skill-group-tag">ChatGPT</span></div>
+</article>
+<article class="skill-group skill-group--growth" style="--i:2">
+<div class="skill-group-top"><span class="skill-group-icon"><svg viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="M19 4 21 2"/></svg></span><span class="skill-group-index">03 / GROWTH</span></div>
+<p class="skill-group-kicker">Create · Connect · Grow</p><h3>Creative &amp; Digital Growth</h3>
+<p class="skill-group-description">Creating content and marketing campaigns that help brands communicate clearly and reach the right audience.</p>
+<div class="skill-group-tags"><span class="skill-group-tag skill-group-tag--primary">Digital Marketing</span><span class="skill-group-tag">Meta Campaigns</span><span class="skill-group-tag">Audience Targeting</span><span class="skill-group-tag">SEO</span><span class="skill-group-tag">Video Editing</span><span class="skill-group-tag">CapCut</span><span class="skill-group-tag">Content Graphics</span></div>
+</article>
+</div>
+          </div>
         </div>
       </div>
     </div>
@@ -188,7 +182,7 @@
       <div class="feature-cards-grid">
 
         <div class="neon-wrap" data-reveal>
-          <article class="neon-card">
+          <article class="neon-card feature-card--ios">
             <div class="neon-inner">
               <!-- Replace this visual with your own screenshot: <img src="your-image.jpg" alt="iOS Design System"> -->
               <div class="neon-visual" aria-hidden="true">
@@ -219,8 +213,9 @@
                 </div>
               </div>
               <div class="neon-body">
-                <span class="neon-tag">Design System · iOS</span>
-                <h2 class="neon-title">iOS Design System</h2>
+                <span class="neon-tag">01 / Design system · iOS</span>
+                <h2 class="neon-title">A thoughtful iOS design system</h2>
+                <p class="feature-card-desc">A cohesive library of reusable components, clear type and color foundations, and polished mobile patterns.</p>
                 <div class="neon-cta-wrap">
                   <a class="btn btn-on-dark btn-sm" href="https://www.figma.com/design/6jQPuIWlWk3VSXsZ6brRD7/IOS-App?node-id=0-1&amp;t=4dHvgA9B8AZuFbtg-1" target="_blank" rel="noopener" data-cursor="Open">
                     Let's Check
@@ -233,7 +228,7 @@
         </div>
 
         <div class="neon-wrap" data-reveal data-delay="120">
-          <article class="neon-card neon-card--alt">
+          <article class="neon-card neon-card--saas neon-card--alt">
             <div class="neon-inner">
               <!-- Replace this visual with your own screenshot: <img src="your-image.jpg" alt="SaaS Dashboard UI"> -->
               <div class="neon-visual" aria-hidden="true">
@@ -277,7 +272,9 @@
                 </div>
               </div>
               <div class="neon-body">
-                <h2 class="neon-title neon-title--long">An enterprise SaaS design system concept for analytics and workspace administration.</h2>
+                <span class="neon-tag">02 / Product design · SaaS</span>
+                <h2 class="neon-title neon-title--long">Enterprise SaaS, made clearer</h2>
+                <p class="feature-card-desc">A scalable interface concept for analytics, team workflows and confident workspace administration.</p>
                 <div class="neon-cta-wrap">
                   <a class="btn btn-on-dark btn-sm" href="https://www.figma.com/design/5ZHyCJJLcOH44CmFlf6abT/Metric---Saas-Applicaion?node-id=0-1&amp;t=GakvOjCdT7jPFPi6-1" target="_blank" rel="noopener" data-cursor="Open">
                     Let's Check
@@ -290,7 +287,7 @@
         </div>
 
         <div class="neon-wrap" data-reveal data-delay="240">
-          <article class="neon-card neon-card--c">
+          <article class="neon-card neon-card--mobile neon-card--c">
             <div class="neon-inner">
               <!-- Replace Movo_App.jpg with your own screenshot if you like -->
               <div class="neon-visual" aria-hidden="true">
@@ -310,8 +307,9 @@
                 </div>
               </div>
               <div class="neon-body">
-                <span class="neon-tag">Mobile App</span>
-                <h2 class="neon-title neon-title--long">Make the next step obvious, from choosing a ride to finding it at the curb</h2>
+                <span class="neon-tag">03 / Experience design · Mobile</span>
+                <h2 class="neon-title neon-title--long">Every ride, one smooth journey</h2>
+                <p class="feature-card-desc">A focused ride-booking experience that helps people choose a ride, follow its progress and meet their driver.</p>
                 <div class="neon-cta-wrap">
                   <a class="btn btn-on-dark btn-sm" href="https://www.figma.com/design/PSe9ELNNPbyLBrCsdbp8nq/MOVO-Taxi-App?node-id=3-183&amp;t=k6T4IKTI2DgfJpfR-1" target="_blank" rel="noopener" data-cursor="Open">
                     Let's Check
@@ -354,20 +352,30 @@
           </div>
         </a>
 
-        <div class="project-card hut-card" id="hutteriteCard" role="button" tabindex="0" aria-label="Open Hutterite Marketplace case study (password required)" data-reveal>
+        <!-- ============================================================
+             HUTTERITE CARD — password gate is currently OFF.
+             The card opens the case study directly and shows the clear image.
+             TO TURN THE PASSWORD BACK ON: change data-locked="false" to data-locked="true"
+             on the card below. (Blurred image, lock label, "Password protected." note
+             and the password box are all kept in the code and come back automatically.)
+             ============================================================ -->
+        <div class="project-card hut-card" id="hutteriteCard" role="button" tabindex="0" aria-label="Open Hutterite Marketplace case study" data-locked="false" data-reveal>
           <div class="project-cover hut-cover">
-            <img src="Hutterite_Marketplace.jpg" alt="Hutterite Marketplace home page design" class="project-cover-photo">
-            <!--
-              <div class="hut-overlay">
+            <img src="Hutterite_Marketplace.jpg" alt="Hutterite Marketplace home page design" class="hut-blur-img">
+            <div class="hut-overlay">
               <span class="hut-lock-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </span>
               <span class="hut-lock-label">Password Required</span>
-            </div> -->
+            </div>
+            <span class="tag">E-commerce · Canada</span>
+            <span class="view-tag">View case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
           </div>
           <div class="project-info">
             <h3>Hutterite Marketplace — Community commerce designed for usability and revenue</h3>
-            <p>A comprehensive e-commerce platform designed for a unique community brand. Password protected.</p>
+            <p>A comprehensive e-commerce platform designed for a unique community brand.<span class="hut-pw-note"> Password protected.</span></p>
             <div class="project-extra">
               <span class="project-credit">Company Credit — Digital Chipmunks</span>
               <a class="hut-visit" href="https://hutteritemarketplace.ca/" target="_blank" rel="noopener">
@@ -394,140 +402,81 @@
         </div>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-card" data-reveal>
-          <div class="gallery-visual gallery-visual--img">
-            <img src="PCHE_Design.png" alt="PCHE UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">PCHE UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://pche.lk/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
+      <div class="gallery-carousel-wrap" data-gallery-carousel>
+        <div class="gallery-carousel-toolbar">
+          <p class="gallery-carousel-note"><span class="gallery-live-dot"></span> Selected digital experiences <span class="gallery-counter"><b data-gallery-current>01</b> / 07</span></p>
+          <div class="gallery-carousel-controls">
+            <button type="button" class="gallery-arrow" data-gallery-prev aria-label="Previous project">←</button>
+            <button type="button" class="gallery-arrow" data-gallery-next aria-label="Next project">→</button>
           </div>
         </div>
-
-        <div class="gallery-card" data-reveal data-delay="80">
-          <div class="gallery-visual gallery-visual--img">
-            <img src="WTC_Colombo.jpg" alt="WTC Colombo UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">WTC Colombo - UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://wtccolombo.com/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
+        <div class="gallery-carousel" data-gallery-track tabindex="0" aria-label="Project carousel">
+          <a class="gallery-project gallery-project--carousel" href="https://pche.lk/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View PCHE website"><span class="gallery-project-image"><img src="PCHE_Design.png" alt="PCHE website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">01</span><span class="gallery-project-info"><small>COMPANY WEBSITE</small><strong>PCHE</strong><em>View live website ↗</em></span></a>
+          <a class="gallery-project gallery-project--carousel" href="https://wtccolombo.com/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View WTC Colombo website"><span class="gallery-project-image"><img src="WTC_Colombo.jpg" alt="WTC Colombo website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">02</span><span class="gallery-project-info"><small>CORPORATE WEBSITE</small><strong>WTC Colombo</strong><em>View live website ↗</em></span></a>
+          <a class="gallery-project gallery-project--carousel" href="https://blissfulescapessl.com/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View Blissful Escape website"><span class="gallery-project-image"><img src="Blissfull_Design.png" alt="Blissful Escape website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">03</span><span class="gallery-project-info"><small>HOSPITALITY</small><strong>Blissful Escape</strong><em>View live website ↗</em></span></a>
+          <a class="gallery-project gallery-project--carousel" href="https://cellux.lk/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View Cellux website"><span class="gallery-project-image"><img src="Cellux_Design.png" alt="Cellux website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">04</span><span class="gallery-project-info"><small>DIGITAL EXPERIENCE</small><strong>Cellux</strong><em>View live website ↗</em></span></a>
+          <a class="gallery-project gallery-project--carousel" href="https://crowntex.com.au/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View Crowntex website"><span class="gallery-project-image"><img src="Crowntex.jpg" alt="Crowntex website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">05</span><span class="gallery-project-info"><small>E-COMMERCE</small><strong>Crowntex</strong><em>View live website ↗</em></span></a>
+          <a class="gallery-project gallery-project--carousel" href="https://estiacoholidays.com/" target="_blank" rel="noopener noreferrer" data-cursor="View site" aria-label="View Estiaco Travel website"><span class="gallery-project-image"><img src="Estiaco_Travel.png" alt="Estiaco Travel website preview"></span><span class="gallery-project-shade"></span><span class="gallery-project-number">06</span><span class="gallery-project-info"><small>TRAVEL & HOSPITALITY</small><strong>Estiaco Travel</strong><em>View live website ↗</em></span></a>
+          <div class="gallery-project gallery-project--ladder" aria-label="Ladder Global company project"><span class="ladder-orbit"></span><span class="ladder-orbit ladder-orbit--two"></span><span class="ladder-monogram">LG</span><span class="ladder-caption"><small>COMPANY PROJECT</small><strong>ladder global</strong><em>Product & digital experience</em></span><span class="gallery-project-number">07</span></div>
         </div>
-
-        <div class="gallery-card" data-reveal data-delay="160">
-          <div class="gallery-visual gallery-visual--img">
-            <img src="Blissfull_Design.png" alt="Blissful Escape UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">Blissful Escape - UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://blissfulescapessl.com/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="gallery-card" data-reveal>
-          <div class="gallery-visual gallery-visual--img">
-            <img src="Cellux_Design.png" alt="Cellux UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">Cellux - UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://cellux.lk/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="gallery-card" data-reveal data-delay="80">
-          <div class="gallery-visual gallery-visual--img">
-            <img src="Crowntex.jpg" alt="Crowntex UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">Crowntex - UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://crowntex.com.au/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="gallery-card" data-reveal data-delay="160">
-          <div class="gallery-visual gallery-visual--img">
-            <img src="Estiaco_Travel.png" alt="Estiaco Travel UI UX Design mockup">
-          </div>
-          <div class="gallery-caption">
-            <p class="gallery-title">Estiaco Travel - UI UX Design</p>
-            <span class="gallery-meta">Company Project — Ladder Global</span>
-            <span class="gallery-meta">Role: UI/UX Designer</span>
-            <a class="gallery-cta" href="https://estiacoholidays.com/" target="_blank" rel="noopener">
-              View Project
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
+        <div class="gallery-carousel-progress"><span data-gallery-progress></span></div>
+        <div class="gallery-project-captions"><span><b>01</b><strong>PCHE</strong></span><span><b>02</b><strong>WTC Colombo</strong></span><span><b>03</b><strong>Blissful Escape</strong></span><span><b>04</b><strong>Cellux</strong></span><span><b>05</b><strong>Crowntex</strong></span><span><b>06</b><strong>Estiaco Travel</strong></span><span><b>07</b><strong>ladder global</strong></span></div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT + PROCESS -->
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-copy" data-reveal>
-        <p class="eyebrow"><span class="dot"></span>About</p>
-        <h2>Designer first.<br>Systems thinker always.</h2>
-        <p>I spend most of my day moving between research notes, Figma files and dev handoff docs — translating what people need into interfaces that hold up under real use. My background spans product design, front-end implementation and a bit of business analysis, so I design with technical and commercial constraints already in mind, not as an afterthought.</p>
-        <p>Outside client work I'm usually rebuilding my own design system, reading about behavioural psychology, or sketching ideas that may never ship — just to keep the muscle warm.</p>
-        <div class="about-stats">
-          <div><strong data-count="4" data-suffix="+">0</strong><span>Years in practice</span></div>
-          <div><strong data-count="9" data-suffix="">0</strong><span>Long-term clients</span></div>
-          <div><strong data-count="98" data-suffix="%">0</strong><span>Returning clients</span></div>
+  <!-- ABOUT — SCROLL STORY -->
+  <section class="section about-story" id="about">
+    <div class="container">
+      <div class="about-story-head" data-reveal>
+        <p class="eyebrow"><span class="dot"></span>A little about me</p>
+        <h2>Good design starts<br>with <span>good questions.</span></h2>
+        <p class="about-intro">I’m Pasindu — a designer who enjoys connecting the dots between people, products and technology. Scroll through the way I think about my work.</p>
+      </div>
+      <div class="about-journey">
+        <aside class="about-journey-rail"><span class="mono-tag">THE DESIGNER BEHIND THE SCREENS</span><span class="about-rail-line"></span><span class="about-rail-current">01 <i>—</i> 03</span></aside>
+        <div class="about-journey-panels">
+          <article class="about-panel is-current" data-about-panel>
+            <span class="about-panel-number">01</span><p class="about-panel-label">THE THINKER</p>
+            <h3>Curious about<br><em>the why.</em></h3>
+            <p>I start by understanding people, their goals and the context around a problem. Research notes, behavioural psychology and thoughtful questions help me find the real need behind a request.</p>
+            <div class="about-panel-foot"><span>Research · Product thinking · Business context</span><b>01 / 03</b></div>
+          </article>
+          <article class="about-panel" data-about-panel>
+            <span class="about-panel-number">02</span><p class="about-panel-label">THE SYSTEMS THINKER</p>
+            <h3>Designing beyond<br><em>the screen.</em></h3>
+            <p>My background spans product design, front-end implementation and business analysis. I think about flows, components, edge cases and technical constraints — not just how one screen looks.</p>
+            <div class="about-panel-foot"><span>UX architecture · Design systems · Feasibility</span><b>02 / 03</b></div>
+          </article>
+          <article class="about-panel" data-about-panel>
+            <span class="about-panel-number">03</span><p class="about-panel-label">THE COLLABORATOR</p>
+            <h3>Better work,<br><em>together.</em></h3>
+            <p>I enjoy working closely with developers, clients and cross-functional teams — turning complex conversations into clear decisions, useful prototypes and thoughtful handoffs.</p>
+            <div class="about-panel-foot"><span>Communication · Iteration · Delivery</span><b>03 / 03</b></div>
+          </article>
         </div>
       </div>
+      <div class="about-stats about-stats--strip" data-reveal>
+        <div><strong data-count="4" data-suffix="+">0</strong><span>Years in practice</span></div>
+        <div><strong data-count="9" data-suffix="">0</strong><span>Long-term clients</span></div>
+        <div><strong data-count="98" data-suffix="%">0</strong><span>Returning clients</span></div>
+      </div>
+    </div>
+  </section>
 
-      <div id="process" data-reveal data-delay="120">
+  <!-- PROCESS — VISUAL STEPS -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-head" data-reveal>
         <p class="eyebrow"><span class="dot"></span>How I work</p>
-        <h2 style="font-size:clamp(1.6rem,2.6vw,2.1rem); margin-top:14px;">A four-step process</h2>
-        <div class="timeline" style="margin-top:36px;">
-          <div class="step" data-reveal>
-            <span class="step-num">01 — Discover</span>
-            <h4>Talk to real users</h4>
-            <p>Audit what already exists and find out which assumptions are actually true before designing anything.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step-num">02 — Define</span>
-            <h4>Agree on the problem</h4>
-            <p>Turn research into a clear problem statement and success metrics everyone signs off on.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step-num">03 — Design</span>
-            <h4>Prototype in fast loops</h4>
-            <p>Wireframe and test in tight cycles, refining until the flow feels obvious rather than clever.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step-num">04 — Deliver</span>
-            <h4>Stay through handoff</h4>
-            <p>Hand off detailed specs and stay close through development so nothing gets lost in translation.</p>
-          </div>
-        </div>
+        <h2>From first question<br>to thoughtful delivery.</h2>
+        <p>A collaborative process that keeps the problem, the people and the outcome connected.</p>
+      </div>
+      <div class="process-track">
+        <article class="process-stage" data-reveal><span class="process-stage-no">01</span><div class="process-stage-icon">⌕</div><p class="process-stage-kicker">DISCOVER</p><h3>Listen before<br>designing.</h3><p>Audit what exists, speak with stakeholders and understand users before making assumptions.</p><span class="process-stage-output">Output <b>Research &amp; insights</b></span></article>
+        <article class="process-stage" data-reveal data-delay="70"><span class="process-stage-no">02</span><div class="process-stage-icon">◎</div><p class="process-stage-kicker">DEFINE</p><h3>Make the problem<br>clear.</h3><p>Align on the core problem, map journeys and agree on what success should look like.</p><span class="process-stage-output">Output <b>Flows &amp; priorities</b></span></article>
+        <article class="process-stage" data-reveal data-delay="140"><span class="process-stage-no">03</span><div class="process-stage-icon">✳</div><p class="process-stage-kicker">DESIGN</p><h3>Explore, test<br>and refine.</h3><p>Move from wireframes to prototypes, test ideas and iterate toward a clear experience.</p><span class="process-stage-output">Output <b>Tested interface</b></span></article>
+        <article class="process-stage" data-reveal data-delay="210"><span class="process-stage-no">04</span><div class="process-stage-icon">↗</div><p class="process-stage-kicker">DELIVER</p><h3>Make it real<br>together.</h3><p>Prepare detailed handoff specs and stay close to development to protect design intent.</p><span class="process-stage-output">Output <b>Build-ready handoff</b></span></article>
       </div>
     </div>
   </section>
@@ -541,70 +490,43 @@
         <p>Five years across engineering, freelance and agency roles — always moving toward cleaner, more human digital experiences.</p>
       </div>
 
-      <div class="experience-list" data-reveal data-delay="100">
-        <div class="experience-item">
-          <div class="experience-when">2023 Dec — Present</div>
-          <div class="experience-main">
-            <h3>UX/UI Designer <span class="exp-company">— Ladder Global</span></h3>
-            <p>Designing conversion-focused websites and interfaces for B2B and B2C clients. Several projects improved client sales and conversions by 30–40% through strategic UI/UX and clear user flows.</p>
-          </div>
-        </div>
-        <div class="experience-item">
-          <div class="experience-when">2024 Jan — 2024 Aug</div>
-          <div class="experience-main">
-            <h3>Senior UX/UI Designer <span class="exp-company">— PRAM IT (Part-time)</span></h3>
-            <p>Led user research and design thinking initiatives that drove a 25% increase in user retention. Built and refined design systems, and mentored intern designers on effective UX practices.</p>
-          </div>
-        </div>
-        <div class="experience-item">
-          <div class="experience-when">2022 Sep — 2023 Dec</div>
-          <div class="experience-main">
-            <h3>UX/UI Designer <span class="exp-company">— Seekers Cloud</span></h3>
-            <p>Designed user-centred web and LMS applications guided by personas and research. Collaborated with developers and business analysts, and mentored interns on design workflows.</p>
-          </div>
-        </div>
-        <div class="experience-item">
-          <div class="experience-when">2022 — 2023</div>
-          <div class="experience-main">
-            <h3>UI/UX &amp; Web Designer <span class="exp-company">— Freelance</span></h3>
-            <p>Designed responsive WordPress websites and web applications for various clients, focusing on usability, accessibility, performance and SEO-driven results.</p>
-          </div>
-        </div>
-        <div class="experience-item">
-          <div class="experience-when">2020 — 2021</div>
-          <div class="experience-main">
-            <h3>Software Engineer Intern <span class="exp-company">— IT Support &amp; QA</span></h3>
-            <p>Supported internal systems with QA testing, API and FTP error fixes, and technical assistance across Python, JSON and AIS internal platforms.</p>
-          </div>
-        </div>
+      <div class="career-journey">
+        <div class="career-spine" aria-hidden="true"><span></span></div>
+        <article class="career-stop" data-reveal><div class="career-date">DEC 2023 — PRESENT</div><div class="career-node">01</div><div class="career-content"><span class="career-type">AGENCY · CURRENT</span><h3>UX/UI Designer <span>at Ladder Global</span></h3><p>Designing conversion-focused websites and interfaces for B2B and B2C clients. Several projects improved client sales and conversions by 30–40% through strategic UI/UX and clear user flows.</p><div class="career-tags"><span>Product design</span><span>Conversion UX</span><span>Client collaboration</span></div></div></article>
+        <article class="career-stop" data-reveal><div class="career-date">JAN 2024 — AUG 2024</div><div class="career-node">02</div><div class="career-content"><span class="career-type">PART-TIME · LEADERSHIP</span><h3>Senior UX/UI Designer <span>at PRAM IT</span></h3><p>Led user research and design thinking initiatives that drove a 25% increase in user retention. Built and refined design systems, and mentored intern designers on effective UX practices.</p><div class="career-tags"><span>User research</span><span>Design systems</span><span>Mentoring</span></div></div></article>
+        <article class="career-stop" data-reveal><div class="career-date">SEP 2022 — DEC 2023</div><div class="career-node">03</div><div class="career-content"><span class="career-type">PRODUCT &amp; LEARNING</span><h3>UX/UI Designer <span>at Seekers Cloud</span></h3><p>Designed user-centred web and LMS applications guided by personas and research. Collaborated with developers and business analysts, and mentored interns on design workflows.</p><div class="career-tags"><span>Web applications</span><span>LMS</span><span>Cross-functional teams</span></div></div></article>
+        <article class="career-stop" data-reveal><div class="career-date">2022 — 2023</div><div class="career-node">04</div><div class="career-content"><span class="career-type">INDEPENDENT PRACTICE</span><h3>UI/UX &amp; Web Designer <span>Freelance</span></h3><p>Designed responsive WordPress websites and web applications for various clients, focusing on usability, accessibility, performance and SEO-driven results.</p><div class="career-tags"><span>WordPress</span><span>Web design</span><span>Independent projects</span></div></div></article>
+        <article class="career-stop" data-reveal><div class="career-date">2020 — 2021</div><div class="career-node">05</div><div class="career-content"><span class="career-type">FOUNDATION</span><h3>Software Engineer Intern <span>IT Support &amp; QA</span></h3><p>Supported internal systems with QA testing, API and FTP error fixes, and technical assistance across Python, JSON and AIS internal platforms.</p><div class="career-tags"><span>QA testing</span><span>Technical support</span><span>Problem solving</span></div></div></article>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="section section--tight">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow"><span class="dot"></span>Toolkit</p>
-        <h2>Tools I reach for daily</h2>
+  <!-- TOOLKIT — FLOATING ICON FIELD -->
+  <section class="section toolkit-section" id="toolkit">
+    <div class="container toolkit-layout">
+      <div class="toolkit-copy" data-reveal>
+        <p class="eyebrow"><span class="dot"></span>My toolkit</p>
+        <h2>The right tool<br>for the <em>right job.</em></h2>
+        <p>Tools are part of the process, not the point. I choose what helps me think clearly, collaborate well and move an idea forward.</p>
+        <div class="toolkit-note"><span class="toolkit-note-dot"></span>Always learning. Always experimenting.</div>
       </div>
-      <div class="skills-grid" data-reveal data-delay="100">
-        <span class="skill-pill">Figma</span>
-        <span class="skill-pill">Framer</span>
-        <span class="skill-pill">Webflow</span>
-        <span class="skill-pill">Adobe XD</span>
-        <span class="skill-pill">Photoshop</span>
-        <span class="skill-pill">Illustrator</span>
-        <span class="skill-pill">Maze</span>
-        <span class="skill-pill">Notion</span>
-        <span class="skill-pill">HTML &amp; CSS</span>
-        <span class="skill-pill">Design Systems</span>
-        <span class="skill-pill">Accessibility (WCAG)</span>
-        <span class="skill-pill">WordPress</span>
-        <span class="skill-pill">Claude AI</span>
-        <span class="skill-pill">ChatGPT</span>
-        <span class="skill-pill">Canva</span>
-        <span class="skill-pill">CapCut</span>
+      <div class="tool-cloud" aria-label="Tools and technologies">
+        <span class="tool-orbit tool-orbit--one"></span><span class="tool-orbit tool-orbit--two"></span>
+        <div class="tool-float tool-float--figma"><b>F</b><span>Figma</span></div>
+        <div class="tool-float tool-float--framer"><b>Fr</b><span>Framer</span></div>
+        <div class="tool-float tool-float--webflow"><b>W</b><span>Webflow</span></div>
+        <div class="tool-float tool-float--xd"><b>Xd</b><span>Adobe XD</span></div>
+        <div class="tool-float tool-float--ps"><b>Ps</b><span>Photoshop</span></div>
+        <div class="tool-float tool-float--ai"><b>Ai</b><span>Illustrator</span></div>
+        <div class="tool-float tool-float--maze"><b>M</b><span>Maze</span></div>
+        <div class="tool-float tool-float--notion"><b>N</b><span>Notion</span></div>
+        <div class="tool-float tool-float--code"><b>&lt;/&gt;</b><span>HTML &amp; CSS</span></div>
+        <div class="tool-float tool-float--wp"><b>W</b><span>WordPress</span></div>
+        <div class="tool-float tool-float--claude"><b>✳</b><span>Claude AI</span></div>
+        <div class="tool-float tool-float--chatgpt"><b>◎</b><span>ChatGPT</span></div>
+        <div class="tool-float tool-float--canva"><b>C</b><span>Canva</span></div>
+        <div class="tool-float tool-float--capcut"><b>⌁</b><span>CapCut</span></div>
+        <span class="tool-cloud-caption">DESIGN · BUILD · EXPLORE</span>
       </div>
     </div>
   </section>
@@ -752,6 +674,32 @@
       </button>
     </div>
   </div>
+</div>
+
+<!-- Optional, user-controlled original ambient music player -->
+<div class="ambient-player" id="ambientPlayer">
+  <button class="music-disc-button" id="musicExpand" type="button" aria-expanded="false" aria-controls="musicPanel" aria-label="Open portfolio music player" title="Listen while you explore">
+    <span class="music-disc" aria-hidden="true"><span></span></span>
+    <span class="music-disc-note" aria-hidden="true">♫</span>
+  </button>
+  <div class="music-panel" id="musicPanel" hidden>
+    <div class="music-panel-top">
+      <div><span class="music-kicker">A LITTLE BACKGROUND MUSIC</span><strong id="musicTrackName">Quiet Morning</strong></div>
+      <button class="music-close" id="musicClose" type="button" aria-label="Close music player">×</button>
+    </div>
+    <div class="music-controls">
+      <button class="music-control music-play" id="musicPlay" type="button" aria-label="Play music"><span class="play-glyph">▶</span></button>
+      <button class="music-control" id="musicNext" type="button" aria-label="Play next track">↗</button>
+      <label class="music-volume"><span>VOL</span><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.35" aria-label="Music volume"></label>
+    </div>
+    <div class="music-track-list" role="group" aria-label="Choose a track">
+      <button type="button" class="music-track is-active" data-track="0">01 <span>Quiet Morning</span></button>
+      <button type="button" class="music-track" data-track="1">02 <span>Soft Focus</span></button>
+      <button type="button" class="music-track" data-track="2">03 <span>Slow Sunday</span></button>
+    </div>
+    <p class="music-note">Original instrumental music · Made for this portfolio</p>
+  </div>
+  <audio id="portfolioAudio" preload="none" loop></audio>
 </div>
 
 <!-- Floating services dock -->

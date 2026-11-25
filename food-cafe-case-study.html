@@ -3,479 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Food Cafe — Mobile Ordering App Case Study — Pasindu Madhushanka</title>
-<meta name="description" content="End-to-end UX case study for a Canadian food delivery mobile app — research, information architecture, design system and high-fidelity UI design.">
-
+<title>Food Cafe — Product Design Case Study — Pasindu Madhushanka</title>
+<meta name="description" content="A UX and UI design case study for Food Cafe, a Canadian mobile food ordering experience. Explore the research, user journeys, interface and design system.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* ── Food Cafe case study local styles ── */
+/* FOOD CAFE — editorial case-study art direction */
+:root{--fc-paper:#f8f5ef;--fc-white:#fffdfa;--fc-ink:#20201d;--fc-muted:#77746d;--fc-line:#e7e0d5;--fc-red:#ed4b35;--fc-orange:#ff9b53;--fc-green:#668b52;--fc-yellow:#f4d77a;--fc-serif:'Playfair Display',Georgia,serif;--fc-sans:'DM Sans',Manrope,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--fc-paper);color:var(--fc-ink);font-family:var(--fc-sans)}
+.page-veil{display:none}.site-header{background:rgba(248,245,239,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(32,32,29,.08)}
+.site-header .logo{font-family:var(--fc-sans);font-weight:800;letter-spacing:-.05em}.nav-links a{font-size:.86rem}.btn-outline{border-color:#cfc7bb}
+.fc-hero{padding:52px 0 84px;overflow:hidden;position:relative}.fc-hero:before{content:'FOOD';position:absolute;right:-.04em;top:100px;font:800 clamp(10rem,25vw,25rem)/.8 var(--fc-sans);letter-spacing:-.1em;color:rgba(237,75,53,.045);pointer-events:none}
+.fc-wrap{max-width:1240px;margin:auto;padding:0 32px;position:relative;z-index:1}.fc-breadcrumb{display:flex;gap:10px;align-items:center;font:500 .68rem 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#8c867c;margin-bottom:52px}.fc-breadcrumb a{color:inherit;text-decoration:none}.fc-breadcrumb .slash{color:#c9bfb1}
+.fc-kicker{display:flex;align-items:center;gap:10px;font:500 .7rem 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--fc-red);margin-bottom:22px}.fc-kicker:before{content:'';width:28px;height:1px;background:var(--fc-red)}
+.fc-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:48px;align-items:center}.fc-hero h1{font:700 clamp(3.5rem,7.4vw,7.2rem)/.98 var(--fc-sans);letter-spacing:-.085em;max-width:680px;margin:0}.fc-hero h1 em{font:italic 600 .98em var(--fc-serif);letter-spacing:-.065em;color:var(--fc-red)}.fc-lede{font-size:1.05rem;line-height:1.8;color:#666158;max-width:540px;margin:28px 0 30px}.fc-chips{display:flex;flex-wrap:wrap;gap:8px}.fc-chip{padding:8px 12px;border:1px solid #ded6ca;border-radius:99px;font-size:.72rem;font-weight:600;color:#625e56;background:rgba(255,253,250,.55)}
+.fc-hero-art{position:relative;min-height:530px;display:flex;align-items:center;justify-content:center}.fc-hero-art:before{content:'';position:absolute;width:82%;aspect-ratio:1;border-radius:50%;background:#f0dfc8;right:4%;top:8%;}.fc-hero-art:after{content:'A LITTLE MORE\A JOY IN EVERY ORDER';white-space:pre;position:absolute;right:0;bottom:2%;font:500 .65rem/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#827a6f;text-align:right}.fc-hero-art img{position:relative;width:100%;max-width:590px;border-radius:5px;box-shadow:0 35px 90px rgba(73,49,28,.17);transform:rotate(2deg);z-index:1}.fc-stamp{position:absolute;z-index:2;left:0;top:10%;width:106px;height:106px;border-radius:50%;background:var(--fc-red);color:#fff;display:grid;place-items:center;text-align:center;font:600 .64rem/1.35 'IBM Plex Mono',monospace;letter-spacing:.08em;transform:rotate(-12deg);box-shadow:0 12px 30px #ed4b3535}.fc-stamp b{display:block;font:700 1.7rem var(--fc-serif)}
+.fc-project-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--fc-line);border-bottom:1px solid var(--fc-line);margin-top:70px}.fc-meta{padding:22px 18px 22px 0}.fc-meta+.fc-meta{padding-left:24px;border-left:1px solid var(--fc-line)}.fc-meta span{display:block;font:500 .62rem 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:#928b80;margin-bottom:9px}.fc-meta strong{font-size:.9rem;font-weight:700}
+.fc-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:76px;max-width:1240px;margin:0 auto;padding:88px 32px 100px}.fc-side{position:relative}.fc-side-inner{position:sticky;top:112px}.fc-side-label{font:500 .64rem 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#9a9185;margin-bottom:18px}.fc-side nav{display:flex;flex-direction:column;gap:5px;border-left:1px solid #ded6ca;padding-left:16px}.fc-side nav a{text-decoration:none;color:#8b857b;font-size:.82rem;padding:8px 0;transition:.2s}.fc-side nav a:hover,.fc-side nav a.active{color:var(--fc-red);font-weight:700}.fc-content{min-width:0;max-width:900px}.fc-section{padding:0 0 92px;margin-bottom:84px;border-bottom:1px solid var(--fc-line)}.fc-section:last-child{border:0;margin-bottom:0}.fc-eyebrow{font:500 .67rem 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--fc-red);margin:0 0 18px}.fc-section h2{font:700 clamp(2.25rem,4.4vw,4.25rem)/1.06 var(--fc-sans);letter-spacing:-.07em;max-width:790px;margin:0 0 24px}.fc-section h2 em{font:italic 600 1em var(--fc-serif);color:var(--fc-red)}.fc-section h3{font-size:1.22rem;letter-spacing:-.035em;margin:0 0 12px}.fc-section p{font-size:1rem;line-height:1.85;color:#69645c;max-width:760px;margin:0 0 18px}.fc-section .fc-intro{font-size:1.12rem;line-height:1.85;color:#514d46;max-width:760px}
+.fc-note{background:#f0e9dc;border-radius:5px;padding:26px 30px;margin:32px 0;display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start}.fc-note-mark{width:42px;height:42px;border-radius:50%;background:var(--fc-yellow);display:grid;place-items:center;font:700 1.2rem var(--fc-serif)}.fc-note p{margin:0;color:#514b40;font-size:.95rem}.fc-note strong{color:var(--fc-ink)}
+.fc-audience{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.fc-audience-card{padding:23px 22px 25px;background:var(--fc-white);border:1px solid var(--fc-line);border-radius:5px;min-height:170px}.fc-audience-card span{font:500 .65rem 'IBM Plex Mono',monospace;color:var(--fc-red)}.fc-audience-card p{font-size:.9rem;line-height:1.65;margin:20px 0 0;color:#625d55}
+.fc-problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}.fc-problem{background:#292824;color:#fff;border-radius:5px;padding:25px 22px;min-height:205px;position:relative;overflow:hidden}.fc-problem:after{content:'';position:absolute;width:110px;height:110px;border:1px solid #ffffff18;border-radius:50%;right:-38px;bottom:-48px}.fc-problem .n{font:500 .66rem 'IBM Plex Mono',monospace;color:#ff9b83}.fc-problem h3{font-size:1.04rem;margin:27px 0 9px;color:#fff}.fc-problem p{font-size:.82rem;line-height:1.65;color:#c9c3b9;margin:0}
+.fc-insights{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--fc-line);margin-top:30px}.fc-insight{padding:22px 24px 22px 0;border-bottom:1px solid var(--fc-line);display:grid;grid-template-columns:32px 1fr;gap:12px}.fc-insight:nth-child(odd){border-right:1px solid var(--fc-line)}.fc-insight:nth-child(even){padding-left:24px}.fc-insight b{font:500 .68rem 'IBM Plex Mono',monospace;color:var(--fc-red)}.fc-insight p{font-size:.88rem;line-height:1.65;margin:0}
+.fc-process{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:38px;border-top:1px solid var(--fc-line);border-bottom:1px solid var(--fc-line)}.fc-phase{padding:24px 18px 28px 0;position:relative}.fc-phase+.fc-phase{padding-left:18px;border-left:1px solid var(--fc-line)}.fc-phase span{font:500 .65rem 'IBM Plex Mono',monospace;color:var(--fc-red)}.fc-phase h3{font-size:1rem;margin:22px 0 10px}.fc-phase p{font-size:.82rem;line-height:1.7;margin:0}
+.fc-responsibilities{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.fc-responsibilities span{border:1px solid #dcd3c6;background:#fffaf2;border-radius:99px;padding:9px 14px;font-size:.78rem;font-weight:600;color:#5e594f}
+.fc-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0}.fc-principle{padding:24px;background:#fffdfa;border:1px solid var(--fc-line);border-radius:5px}.fc-principle .n{font:500 .67rem 'IBM Plex Mono',monospace;color:var(--fc-red)}.fc-principle h3{margin:22px 0 9px;font-size:1.02rem}.fc-principle p{font-size:.84rem;line-height:1.7;margin:0}
+.fc-image-feature{margin:42px 0 0;background:#f0e9dd;border-radius:6px;padding:22px;overflow:hidden}.fc-image-feature img{display:block;width:100%;height:auto;border-radius:3px;box-shadow:0 15px 40px #34291a16}.fc-image-caption{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:18px 3px 2px;color:#716a60;font:500 .65rem 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.fc-image-caption strong{color:var(--fc-ink);font-weight:600}
+.fc-design-system{margin-top:40px;background:#272723;color:#fff;border-radius:6px;padding:34px 34px 30px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.fc-design-system h3{font-size:1.5rem;color:#fff;margin-bottom:12px}.fc-design-system p{color:#c5c0b7;font-size:.9rem;margin:0}.fc-token-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.fc-token-list span{border:1px solid #ffffff30;border-radius:99px;padding:7px 11px;font-size:.7rem;color:#f5e9d9}.fc-palette{display:flex;gap:8px;align-items:center;justify-content:flex-end}.fc-palette i{display:block;width:44px;height:104px;border-radius:4px;transform:rotate(5deg)}.fc-palette i:nth-child(2n){transform:rotate(-4deg);height:82px}.fc-palette i:nth-child(1){background:#ed4b35}.fc-palette i:nth-child(2){background:#ff9b53}.fc-palette i:nth-child(3){background:#f4d77a}.fc-palette i:nth-child(4){background:#668b52}.fc-palette i:nth-child(5){background:#24231f}
+.fc-results{background:#292824;color:#fff;border-radius:6px;padding:34px;margin-top:36px}.fc-results-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.fc-results-head h3{color:#fff;font:700 1.8rem var(--fc-sans);letter-spacing:-.05em;margin:0}.fc-results-head span{font:500 .62rem 'IBM Plex Mono',monospace;color:#c3bdb2;text-transform:uppercase;letter-spacing:.1em}.fc-result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.fc-result{border-top:1px solid #ffffff38;padding-top:18px}.fc-result strong{display:block;font:700 clamp(2.5rem,5vw,4.2rem)/1 var(--fc-sans);letter-spacing:-.08em;color:#ff987e}.fc-result span{display:block;color:#d1cbc1;font-size:.8rem;line-height:1.6;margin-top:12px}.fc-result-note{font-size:.68rem!important;color:#aaa398!important;margin:25px 0 0!important;line-height:1.6!important}
+.fc-next{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:30px 0;border-top:1px solid var(--fc-line);text-decoration:none;color:var(--fc-ink)}.fc-next span{font:500 .65rem 'IBM Plex Mono',monospace;color:#928a7f;text-transform:uppercase;letter-spacing:.1em}.fc-next strong{display:block;font:700 1.8rem var(--fc-sans);letter-spacing:-.05em;margin-top:8px}.fc-next .arrow{width:48px;height:48px;border:1px solid #d8cfc2;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;transition:.25s}.fc-next:hover .arrow{background:var(--fc-red);border-color:var(--fc-red);color:white;transform:translate(3px,-3px)}
+.fc-cta{background:#ed4b35!important;border-radius:6px!important}.fc-cta h2{color:white}.fc-cta p{color:#ffe0d8!important}.fc-cta .btn-on-dark{background:#fff;color:#292824}.fc-cta .cta-email{color:#fff}
+.footer{background:#24231f;color:#f6f1e8}.footer .logo{color:#fff}.footer p,.footer a{color:#c6c0b6}.footer-bottom{border-color:#ffffff20}
 
-/* phone row – 3 screens side by side */
-.cs-phone-row{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-  margin-top:36px; align-items:start;
-}
-.cs-phone-col{
-  display:flex; flex-direction:column; align-items:center; gap:12px;
-}
-.cs-phone-col .phone-mock{ width:100%; max-width:174px; }
-.cs-screen-label{
-  font-family:'IBM Plex Mono',monospace; font-size:.68rem;
-  text-transform:uppercase; letter-spacing:.06em; color:var(--ink-3);
-}
+/* Compact outcome preview near the top — detailed results remain at the end. */
+.fc-top-results{margin-top:28px;padding:22px 26px 24px;background:#292824;color:#fff;border-radius:6px;box-shadow:0 18px 45px rgba(48,38,27,.08)}
+.fc-top-results-head{display:flex;justify-content:space-between;gap:16px;font:500 .62rem 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c3bdb2}
+.fc-top-result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.fc-top-result-grid>div{border-top:1px solid #ffffff38;padding-top:13px}
+.fc-top-result-grid strong{display:block;font:700 clamp(2rem,4vw,3.2rem)/1 var(--fc-sans);letter-spacing:-.08em;color:#ff987e}
+.fc-top-result-grid span{display:block;margin-top:8px;color:#d1cbc1;font-size:.75rem;line-height:1.5}
+@media(max-width:600px){.fc-top-results{padding:20px}.fc-top-result-grid{gap:12px}.fc-top-result-grid strong{font-size:2rem}.fc-top-result-grid span{font-size:.68rem}}
 
-/* food-app specific phone screen content */
-.fa-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
-.fa-loc-label{ font-family:'IBM Plex Mono',monospace; font-size:.5rem; color:var(--ink-3); text-transform:uppercase; letter-spacing:.04em; display:block; }
-.fa-loc-val{ font-weight:700; font-size:.68rem; display:block; margin-top:1px; }
-.fa-avatar-sm{ width:24px; height:24px; border-radius:50%; background:var(--amber-soft); flex-shrink:0; }
-.fa-search{ height:24px; background:var(--paper-2); border-radius:7px; margin-bottom:10px; }
-.fa-cats{ display:flex; gap:5px; margin-bottom:10px; overflow:hidden; }
-.fa-cat{
-  font-family:'IBM Plex Mono',monospace; font-size:.55rem; letter-spacing:.03em;
-  padding:4px 8px; border-radius:var(--r-pill); background:var(--paper-2); color:var(--ink-2); white-space:nowrap;
-}
-.fa-cat.active{ background:var(--ink); color:#fff; }
-.fa-rest-card{ border-radius:9px; overflow:hidden; border:1px solid var(--line); margin-bottom:8px; }
-.fa-rest-img{
-  height:56px;
-  background:linear-gradient(135deg,#FF6B35 0%,#FFAD85 100%);
-}
-.fa-rest-body{ padding:8px; }
-.fa-rest-name{ height:7px; background:var(--paper-3); border-radius:4px; width:60%; }
-.fa-rest-meta{ height:5px; background:var(--paper-2); border-radius:4px; width:40%; margin-top:5px; }
-
-/* detail / cart screen overrides */
-.fa-item-hero{ height:72px; background:linear-gradient(135deg,#E8421A 0%,#FF6B35 100%); border-radius:9px; margin-bottom:10px; }
-.fa-item-name{ height:8px; background:var(--ink); border-radius:4px; width:70%; }
-.fa-item-desc{ height:5px; background:var(--paper-3); border-radius:4px; width:90%; margin-top:6px; }
-.fa-item-desc.s{ width:60%; margin-top:4px; }
-.fa-qty-row{ display:flex; justify-content:space-between; align-items:center; margin-top:12px; }
-.fa-qty{ display:flex; gap:6px; align-items:center; }
-.fa-qty span{ width:18px; height:18px; border-radius:50%; background:var(--paper-2); }
-.fa-qty strong{ font-size:.7rem; font-weight:700; }
-.fa-add{ height:24px; flex:1; background:var(--ink); border-radius:var(--r-pill); margin-top:12px; }
-
-.fa-cart-row{ display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid var(--paper-2); }
-.fa-cart-row .fa-rest-name{ margin:0; }
-.fa-cart-amt{ height:7px; background:var(--cobalt-soft); border-radius:4px; width:28%; }
-.fa-total-row{ display:flex; justify-content:space-between; margin-top:10px; }
-.fa-total-row span{ height:8px; background:var(--paper-3); border-radius:4px; width:34%; }
-.fa-total-row strong{ height:8px; background:var(--ink); border-radius:4px; width:22%; display:block; }
-.fa-checkout{ height:28px; background:var(--cobalt); border-radius:var(--r-pill); margin-top:10px; }
-
-/* design system preview */
-.cs-ds-preview{
-  border:1px solid var(--line); border-radius:var(--r-md);
-  padding:28px; background:var(--paper); margin-top:32px;
-}
-.cs-ds-row{ display:flex; gap:40px; flex-wrap:wrap; }
-.cs-ds-col{ flex:1; min-width:130px; }
-.cs-ds-col > .mono-tag{ display:block; margin-bottom:14px; }
-.cs-color-row{ display:flex; gap:9px; flex-wrap:wrap; }
-.cs-swatch{ width:38px; height:38px; border-radius:10px; border:1px solid rgba(0,0,0,.07); flex-shrink:0; }
-.cs-type-row{ display:flex; flex-direction:column; gap:7px; }
-.cs-t-display{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:1.3rem; line-height:1; letter-spacing:-0.02em; }
-.cs-t-body{ font-weight:600; font-size:.94rem; }
-.cs-t-label{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); }
-.cs-comp-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
-
-/* outcome extras */
-.cs-outcome-list{ margin-top:24px; display:flex; flex-direction:column; gap:10px; }
-.cs-outcome-item{ display:flex; align-items:flex-start; gap:14px; padding:14px 18px; border:1px solid var(--line); border-radius:var(--r-md); font-size:.96rem; color:var(--ink-2); }
-.cs-outcome-item::before{ content:'→'; font-family:'IBM Plex Mono',monospace; font-size:.8rem; color:var(--cobalt); flex-shrink:0; margin-top:1px; }
-
-/* future improvements list */
-.cs-future-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
-.cs-future-item{ padding:16px 20px; border:1px solid var(--line); border-radius:var(--r-md); font-size:.92rem; color:var(--ink-2); display:flex; align-items:flex-start; gap:10px; }
-.cs-future-item .fi-num{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--ink-3); flex-shrink:0; }
-
-/* dummy image placeholder */
-.dummy-cover{
-  width:100%; border-radius:var(--r-md); background:var(--paper-2);
-  background-image:radial-gradient(circle,var(--paper-3) 1.1px,transparent 1.3px);
-  background-size:18px 18px; border:1px solid var(--line);
-  display:flex; align-items:center; justify-content:center;
-  padding:48px 32px; margin-top:32px;
-}
-
-/* case study real images */
-.cs-hero-cover-img{
-  width:100%; border-radius:var(--r-lg); display:block;
-  margin-top:44px; box-shadow:var(--shadow-lg);
-  object-fit:cover; max-height:640px;
-}
-.cs-img{
-  width:100%; border-radius:var(--r-md); margin-top:28px; display:block;
-  border:1px solid var(--line); box-shadow:var(--shadow-sm);
-  object-fit:contain;
-}
-
-@media(max-width:768px){
-  .cs-phone-row{ grid-template-columns:1fr; }
-  .cs-phone-col .phone-mock{ max-width:220px; }
-  .cs-ds-row{ gap:24px; }
-  .cs-future-grid{ grid-template-columns:1fr; }
-}
+@media(max-width:900px){.fc-hero-grid{grid-template-columns:1fr;gap:20px}.fc-hero-art{min-height:390px}.fc-hero-art img{max-width:650px}.fc-layout{grid-template-columns:1fr;gap:0;padding-top:60px}.fc-side{display:none}.fc-project-bar{grid-template-columns:repeat(2,1fr)}.fc-meta:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--fc-line)}.fc-meta:nth-child(4){border-top:1px solid var(--fc-line)}.fc-process{grid-template-columns:repeat(2,1fr)}.fc-phase:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--fc-line)}.fc-phase:nth-child(4){border-top:1px solid var(--fc-line)}}
+@media(max-width:600px){.fc-wrap{padding:0 20px}.fc-hero{padding:32px 0 54px}.fc-breadcrumb{margin-bottom:38px}.fc-hero h1{font-size:clamp(3.1rem,16vw,5rem)}.fc-hero-grid{gap:0}.fc-hero-art{min-height:300px;margin-top:12px}.fc-stamp{width:78px;height:78px;font-size:.5rem}.fc-stamp b{font-size:1.3rem}.fc-project-bar{margin-top:36px}.fc-meta{padding:17px 10px 17px 0}.fc-meta+.fc-meta{padding-left:14px}.fc-meta strong{font-size:.8rem}.fc-layout{padding:58px 20px 70px}.fc-section{padding-bottom:62px;margin-bottom:58px}.fc-audience,.fc-problem-grid,.fc-principles{grid-template-columns:1fr}.fc-audience-card{min-height:0}.fc-audience-card p{margin-top:12px}.fc-problem{min-height:0}.fc-problem h3{margin-top:16px}.fc-insights{grid-template-columns:1fr}.fc-insight:nth-child(odd){border-right:0}.fc-insight:nth-child(even){padding-left:0}.fc-process{grid-template-columns:1fr}.fc-phase,.fc-phase+.fc-phase{padding:20px 0;border-left:0;border-top:1px solid var(--fc-line)}.fc-phase:first-child{border-top:0}.fc-design-system{grid-template-columns:1fr;padding:25px}.fc-palette{justify-content:flex-start}.fc-palette i{height:72px;width:36px}.fc-palette i:nth-child(2n){height:58px}.fc-results{padding:25px}.fc-result-grid{grid-template-columns:1fr;gap:22px}.fc-result strong{font-size:3rem}.fc-results-head{display:block}.fc-results-head span{display:block;margin-top:10px}.fc-image-feature{padding:12px}.fc-image-caption{display:block;line-height:1.8}.fc-image-caption strong{display:block}.fc-section h2{font-size:2.55rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="page-veil" aria-hidden="true"></div>
-<div class="scroll-progress" aria-hidden="true"></div>
-
-<header class="site-header">
-  <div class="container nav-inner">
-    <a class="logo" href="index.html">Pasindu&nbsp;Madhushanka</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#process">Process</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <a class="btn btn-outline btn-sm" href="index.html#contact" data-cursor="Talk">Let's talk</a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <span class="mono-tag">Menu — 01 / 04</span>
-  <a href="index.html#work">Work</a>
-  <a href="index.html#about">About</a>
-  <a href="index.html#process">Process</a>
-  <a href="index.html#contact">Contact</a>
-  <a class="btn btn-primary mobile-cta" href="index.html#contact">Start a project</a>
-</div>
-
+<a class="skip-link" href="#main">Skip to content</a><div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header"><div class="container nav-inner"><a class="logo" href="index.html">Pasindu&nbsp;Madhushanka</a><nav class="nav-links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#process">Process</a><a href="index.html#contact">Contact</a></nav><div class="nav-right"><a class="btn btn-outline btn-sm" href="index.html#contact" data-cursor="Talk">Let's talk</a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></header>
+<div class="mobile-menu" id="mobileMenu"><span class="mono-tag">Menu — 01 / 04</span><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#process">Process</a><a href="index.html#contact">Contact</a><a class="btn btn-primary mobile-cta" href="index.html#contact">Start a project</a></div>
 <main id="main">
-
-  <!-- HERO -->
-  <section class="case-hero">
-    <div class="container">
-
-      <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
-        <a href="index.html">Home</a><span>/</span>
-        <a href="index.html#work">Work</a><span>/</span>
-        <span class="current">Food Cafe Mobile App</span>
-      </nav>
-
-      <div class="case-tags" data-reveal data-delay="80">
-        <span class="tag-pill">Food &amp; Delivery</span>
-        <span class="tag-pill">Mobile App</span>
-        <span class="tag-pill">E-Commerce</span>
-        <span class="tag-pill">Canada · 2024</span>
-      </div>
-
-      <h1 data-reveal data-delay="140">Food Cafe — designing a seamless mobile food ordering experience</h1>
-      <p class="sub" data-reveal data-delay="200">End-to-end UX for a Canadian food delivery app. The goal was to simplify browsing, customisation and checkout while building a scalable design system for the product team.</p>
-
-      <div class="hero-results" data-reveal data-delay="220">
-          <div class="hr-item"><strong data-count="40" data-suffix="%">0</strong><span>Reduction in task-completion time</span></div>
-          <div class="hr-item"><strong data-count="4.6" data-suffix="/5">0</strong><span>Average satisfaction score</span></div>
-          <div class="hr-item"><strong data-count="100" data-suffix="%">0</strong><span>Design goals met</span></div>
-        </div>
-
-      <div class="meta-grid" data-reveal data-delay="240">
-        <div class="meta-item"><div class="label">Project Type</div><div class="value">E-Commerce Mobile App</div></div>
-        <div class="meta-item"><div class="label">My Role</div><div class="value">UX Researcher, UI Designer</div></div>
-        <div class="meta-item"><div class="label">Timeline</div><div class="value">2024 · Canada</div></div>
-        <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, FigJam, Maze</div></div>
-      </div>
-
-      <!-- Project cover image -->
-      <div class="case-cover" data-reveal data-delay="120">
-        <img src="Food__2_.jpg" alt="Food Cafe mobile app on desk" class="cs-hero-cover-img">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BODY -->
-  <section class="section">
-    <div class="container case-body">
-
-      <nav class="case-nav" aria-label="Section navigation">
-        <span class="mono-tag">On this page</span>
-        <a href="#overview">Overview</a>
-        <a href="#problem">Problem</a>
-        <a href="#process-cs">Process</a>
-        <a href="#solution">Solution</a>
-        <a href="#result">Result</a>
-      </nav>
-
-      <div class="case-content">
-
-        <!-- OVERVIEW -->
-        <section id="overview" data-reveal>
-          <p class="mono-tag">Overview</p>
-          <h2>A seamless ordering experience, built from research up</h2>
-          <p>Food Cafe is a mobile food ordering application designed for a Canadian client in 2024. The objective was to create a seamless ordering experience that allows users to discover restaurants, customise meals and complete orders with minimal effort — while maintaining a clean, engaging interface that reflects the brand's personality.</p>
-          <p>The project covered the full UX spectrum: from initial discovery and competitor research through to a production-ready design system and high-fidelity UI.</p>
-
-          <h3 style="margin-top:40px; font-size:1.18rem;">Who it's for</h3>
-          <div class="pain-grid" style="margin-top:18px;">
-            <div class="pain-card"><span class="num">01</span><p>Busy professionals ordering during work hours who need speed above everything else.</p></div>
-            <div class="pain-card"><span class="num">02</span><p>Students looking for affordable, quick meals without friction or decision fatigue.</p></div>
-            <div class="pain-card"><span class="num">03</span><p>Families placing group orders who need clear customisation and a predictable checkout.</p></div>
-          </div>
-        </section>
-
-        <!-- PROBLEM -->
-        <section id="problem" data-reveal>
-          <p class="mono-tag">Problem</p>
-          <h2>Ordering should feel quick — but it didn't</h2>
-          <p>Many food delivery apps offer a wide range of features, but the ordering experience often feels overwhelming. Users spent unnecessary time browsing menus, searching for items and completing checkout. These friction points led to frustration and abandoned orders.</p>
-          <div class="pain-grid">
-            <div class="pain-card"><span class="num">01</span><p>Cognitive overload — too many options and competing UI elements slowed every decision.</p></div>
-            <div class="pain-card"><span class="num">02</span><p>Excessive customisation steps that broke the ordering flow instead of enhancing it.</p></div>
-            <div class="pain-card"><span class="num">03</span><p>An unclear checkout process that eroded trust and caused drop-offs at the payment step.</p></div>
-          </div>
-
-          <h3 style="margin-top:44px; font-size:1.18rem;">Research findings</h3>
-          <p>Before moving into design, I reviewed competitor products, analysed existing ordering patterns and interviewed users. The research surfaced five consistent insights that shaped every subsequent decision:</p>
-          <div class="cs-outcome-list">
-            <div class="cs-outcome-item">Users expect to find their desired meal within a few taps — depth of menu is irrelevant if discovery is slow.</div>
-            <div class="cs-outcome-item">Too many customisation options at once slow decision-making significantly — progressive disclosure is key.</div>
-            <div class="cs-outcome-item">A clear, predictable checkout builds trust and directly reduces payment abandonment.</div>
-            <div class="cs-outcome-item">Personalised recommendations are appreciated when they stay subtle — aggressive surfacing feels intrusive.</div>
-            <div class="cs-outcome-item">Order status should always be visible without requiring extra navigation — uncertainty drives support contacts.</div>
-          </div>
-        </section>
-
-        <!-- PROCESS -->
-        <section id="process-cs" data-reveal>
-          <p class="mono-tag">Process</p>
-          <h2>Discovery to high-fidelity in a structured sprint</h2>
-
-          <div class="timeline">
-            <div class="step" data-reveal>
-              <span class="step-num">01 — Research</span>
-              <h4>Competitor audit &amp; user interviews</h4>
-              <p>Reviewed five leading food delivery apps and ran interviews with twelve users across the three target segments to map their mental models and pain points.</p>
-            </div>
-            <div class="step" data-reveal>
-              <span class="step-num">02 — Define</span>
-              <h4>Information architecture &amp; user flows</h4>
-              <p>Synthesised research into clear information architecture and user flows for the three core journeys: browse, order and track.</p>
-            </div>
-            <div class="step" data-reveal>
-              <span class="step-num">03 — Design</span>
-              <h4>Wireframes → design system → high-fidelity</h4>
-              <p>Lo-fi wireframes validated the structure before building a component-based design system. High-fidelity screens were produced screen by screen in Figma.</p>
-            </div>
-            <div class="step" data-reveal>
-              <span class="step-num">04 — Validate</span>
-              <h4>Prototype testing &amp; iteration</h4>
-              <p>Interactive prototypes were tested with real users via Maze. Two rounds of iteration refined the checkout flow and the item customisation screen specifically.</p>
-            </div>
-          </div>
-
-          <h3 style="margin-top:48px; font-size:1.18rem;">My responsibilities</h3>
-          <div class="cs-outcome-list">
-            <div class="cs-outcome-item">UX research and competitor analysis</div>
-            <div class="cs-outcome-item">User flow creation and information architecture</div>
-            <div class="cs-outcome-item">Low-fidelity wireframes</div>
-            <div class="cs-outcome-item">UI design and interactive prototyping</div>
-            <div class="cs-outcome-item">Design system creation and documentation</div>
-            <div class="cs-outcome-item">Design validation and iterative refinement</div>
-          </div>
-        </section>
-
-        <!-- SOLUTION -->
-        <section id="solution" data-reveal>
-          <p class="mono-tag">Solution</p>
-          <h2>Five principles guided every screen</h2>
-
-          <div class="feature-row">
-            <div class="feature-copy">
-              <span class="num">01</span>
-              <h3>Simplified navigation for fast discovery</h3>
-              <p>Menu categories are surfaced immediately with clear visual hierarchy. A persistent search bar and smart category chips let users reach any item in two taps.</p>
-            </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-bar"></div>
-                <div class="mock-line w-80"></div>
-                <div class="mock-line w-60"></div>
-                <div class="mock-row"><div class="mock-chart"><i style="height:35%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:65%"></i></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-row is-rev">
-            <div class="feature-copy">
-              <span class="num">02</span>
-              <h3>Progressive customisation, not a wall of options</h3>
-              <p>Item customisation is broken into logical steps — base choice, extras, special notes — so users make one decision at a time without feeling overwhelmed.</p>
-            </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-line w-80"></div>
-                <div class="mock-line w-60"></div>
-                <div class="mock-line w-40"></div>
-                <div class="mock-btn" style="width:55%; margin-top:20px;"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-row">
-            <div class="feature-copy">
-              <span class="num">03</span>
-              <h3>Streamlined cart and one-step checkout</h3>
-              <p>Cart review, payment selection and order confirmation fit on a single scrollable screen. Saved payment methods and addresses remove re-entry friction for returning users.</p>
-            </div>
-            <div class="feature-visual">
-              <div class="mock-app">
-                <div class="mock-bar"></div>
-                <div class="mock-line w-80"></div>
-                <div class="mock-btn" style="margin-top:18px;"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- UI SCREENS – real image -->
-          <h3 style="margin-top:56px; font-size:1.18rem;">UI Design</h3>
-          <p>Three core flows — home/discovery, item detail and cart/checkout — designed to work as a seamless sequence rather than three separate screens.</p>
-          <img src="Home__5_.jpg" alt="Food Cafe home screen UI design" class="cs-img" loading="lazy">
-
-          <!-- VISUAL DESIGN – real image -->
-          <h3 style="margin-top:48px; font-size:1.18rem;">Visual Design</h3>
-          <p>The visual design system brings together colour psychology, typography, spacing and imagery with a clear visual hierarchy. Every interaction was designed to reduce unnecessary decisions and keep the user focused on completing their order.</p>
-          <img src="Slice_17.jpg" alt="Food Cafe visual design overview with annotations" class="cs-img" loading="lazy">
-
-          <!-- DESIGN SYSTEM – real image -->
-          <h3 style="margin-top:48px; font-size:1.18rem;">Design System</h3>
-          <p>A scalable, component-based design system ensures every screen stays consistent and future iterations ship faster. Built around reusable tokens covering colour, typography, spacing, elevation and interaction states.</p>
-          <img src="Slice_11.jpg" alt="Food Cafe complete design system — all screens" class="cs-img" loading="lazy">
-        </section>
-
-        <!-- RESULT -->
-        <section id="result" data-reveal>
-          <p class="mono-tag">Result</p>
-          <h2>Outcomes &amp; what the work delivered</h2>
-
-          <div class="result-stats">
-            <div class="result-stat"><strong data-count="40" data-suffix="%">0</strong><span>Reduction in task-completion time observed in usability testing</span></div>
-            <div class="result-stat"><strong data-count="4.6" data-suffix=" / 5">0</strong><span>Average satisfaction score across tested user sessions</span></div>
-            <div class="result-stat"><strong data-count="100" data-suffix="%">0</strong><span>Design goals met — delivered on time, client signed off first review</span></div>
-          </div>
-
-          <h3 style="margin-top:48px; font-size:1.18rem;">What the final product delivered</h3>
-          <div class="cs-outcome-list">
-            <div class="cs-outcome-item">A simplified ordering journey that reduced steps between landing and confirming an order.</div>
-            <div class="cs-outcome-item">Improved navigation and content organisation so users reach any item in under three taps.</div>
-            <div class="cs-outcome-item">Reduced friction at checkout through saved methods, clear totals and a single confirmation screen.</div>
-            <div class="cs-outcome-item">A consistent visual language across every screen via a scalable design system.</div>
-            <div class="cs-outcome-item">A modern, brand-aligned interface the client's development team could build directly from.</div>
-          </div>
-
-          <h3 style="margin-top:48px; font-size:1.18rem;">Future improvements</h3>
-          <p>The current solution meets all core project objectives. Several opportunities remain for future iterations as the product grows:</p>
-          <div class="cs-future-grid">
-            <div class="cs-future-item"><span class="fi-num">01</span>AI-powered food recommendations based on order history</div>
-            <div class="cs-future-item"><span class="fi-num">02</span>Loyalty rewards and personalised promotional offers</div>
-            <div class="cs-future-item"><span class="fi-num">03</span>Real-time courier tracking with live map updates</div>
-            <div class="cs-future-item"><span class="fi-num">04</span>Saved favourites and one-tap reordering</div>
-            <div class="cs-future-item"><span class="fi-num">05</span>Dark mode and full accessibility improvements</div>
-            <div class="cs-future-item"><span class="fi-num">06</span>Multi-language support for a wider audience</div>
-            <div class="cs-future-item"><span class="fi-num">07</span>In-app customer reviews and restaurant ratings</div>
-            <div class="cs-future-item"><span class="fi-num">08</span>Group ordering with split-payment support</div>
-          </div>
-        </section>
-
-        <a class="next-project" href="index.html#work" data-reveal>
-          <div>
-            <span class="mono-tag label">Back to selected work</span>
-            <span class="title">Explore more projects</span>
-          </div>
-          <span class="arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--tight">
-    <div class="container">
-      <div class="cta-banner" data-reveal>
-        <div class="cta-glow" aria-hidden="true"></div>
-        <div class="inner">
-          <p class="eyebrow" style="color:var(--on-dark-dim);"><span class="dot"></span>Got a product that needs clarity?</p>
-          <h2>Let's make the next version the right one.</h2>
-          <p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p>
-          <div class="cta-actions">
-            <a class="btn btn-on-dark magnetic" href="mailto:pasindu@uxerblend.com" data-cursor="Email">
-              Start a conversation
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-            <a class="cta-email" href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section class="fc-hero"><div class="fc-wrap"><nav class="fc-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="slash">/</span><a href="index.html#work">Selected work</a><span class="slash">/</span><span>Food Cafe</span></nav>
+<div class="fc-hero-grid"><div><div class="fc-kicker">Product design case study · 2024</div><h1>Good food.<br>Less <em>friction.</em></h1><p class="fc-lede">Designing a smoother way to discover restaurants, customise a meal and place an order — bringing the whole journey together in one thoughtful mobile experience.</p><div class="fc-chips"><span class="fc-chip">Food &amp; delivery</span><span class="fc-chip">Mobile commerce</span><span class="fc-chip">Canada</span></div></div>
+<div class="fc-hero-art"><div class="fc-stamp">MADE FOR<br><b>Food</b> LOVERS</div><img src="Food__2_.jpg" alt="Food Cafe mobile ordering app presented on a pastel desk" fetchpriority="high"></div></div>
+<div class="fc-project-bar"><div class="fc-meta"><span>My role</span><strong>UX Researcher · UI Designer</strong></div><div class="fc-meta"><span>Project</span><strong>Mobile ordering app</strong></div><div class="fc-meta"><span>Timeline</span><strong>2024 · Canada</strong></div><div class="fc-meta"><span>Tools</span><strong>Figma · FigJam · Maze</strong></div></div>
+<div class="fc-top-results" aria-label="Project-reported outcomes"><div class="fc-top-results-head"><span>PROJECT OUTCOMES</span><span>At a glance ↘</span></div><div class="fc-top-result-grid"><div><strong>40%</strong><span>Faster task completion reported</span></div><div><strong>4.6/5</strong><span>Reported user satisfaction</span></div><div><strong>100%</strong><span>Design goals marked as met</span></div></div></div></div></section>
+<section class="fc-layout"><aside class="fc-side"><div class="fc-side-inner"><div class="fc-side-label">The story</div><nav><a href="#overview" class="active">01&nbsp; Overview</a><a href="#challenge">02&nbsp; Challenge</a><a href="#research">03&nbsp; Research</a><a href="#process">04&nbsp; Process</a><a href="#solution">05&nbsp; Experience</a><a href="#system">06&nbsp; Design system</a><a href="#outcome">07&nbsp; Outcome</a></nav></div></aside>
+<div class="fc-content">
+<section class="fc-section" id="overview"><div class="fc-eyebrow">01 / Overview</div><h2>A better food-ordering experience starts <em>before</em> checkout.</h2><p class="fc-intro">Food Cafe is a mobile food ordering concept created for a Canadian client in 2024. The brief was to make the journey from finding a meal to confirming an order feel simple, clear and enjoyable.</p><p>The work brought together discovery, user-flow planning, interface design and a reusable design system. The focus was not simply to make screens look appealing, but to make the important decisions feel easier at every step.</p>
+<div class="fc-note"><div class="fc-note-mark">✳</div><p><strong>The design opportunity</strong><br>Help people spend less time figuring out the app and more time choosing what they actually want to eat.</p></div>
+<h3>Designed around three everyday needs</h3><div class="fc-audience"><div class="fc-audience-card"><span>01 / BUSY PROFESSIONALS</span><p>Find a satisfying meal quickly during a packed workday.</p></div><div class="fc-audience-card"><span>02 / STUDENTS</span><p>Browse affordable options without getting lost in too many choices.</p></div><div class="fc-audience-card"><span>03 / FAMILIES</span><p>Customise orders and understand the total before checking out.</p></div></div></section>
+<section class="fc-section" id="challenge"><div class="fc-eyebrow">02 / The challenge</div><h2>Too many steps can turn a simple craving into a <em>chore.</em></h2><p class="fc-intro">The project focused on three friction points in common food-ordering journeys: finding the right item, making custom choices and feeling confident at checkout.</p><div class="fc-problem-grid"><article class="fc-problem"><span class="n">01 — DISCOVERY</span><h3>Choice overload</h3><p>Competing options and unclear hierarchy make it harder to find a meal quickly.</p></article><article class="fc-problem"><span class="n">02 — CUSTOMISATION</span><h3>Too many decisions at once</h3><p>Dense option screens can interrupt the flow and make customisation feel complicated.</p></article><article class="fc-problem"><span class="n">03 — CHECKOUT</span><h3>Unclear order details</h3><p>When totals and next steps are difficult to scan, users can lose confidence before paying.</p></article></div></section>
+<section class="fc-section" id="research"><div class="fc-eyebrow">03 / Research &amp; insights</div><h2>Start with what people need. Then shape the <em>flow.</em></h2><p>The discovery phase included a competitor review and user interviews to understand how people browse, customise and complete food orders. The findings informed the information architecture and the core browse, order and track journeys.</p><div class="fc-insights"><div class="fc-insight"><b>01</b><p>People want to reach a relevant meal in just a few taps. Make discovery feel immediate.</p></div><div class="fc-insight"><b>02</b><p>Show customisation choices progressively instead of presenting every option at once.</p></div><div class="fc-insight"><b>03</b><p>Keep checkout predictable, with order details and totals easy to review.</p></div><div class="fc-insight"><b>04</b><p>Recommendations should support discovery without competing with the user's goal.</p></div><div class="fc-insight"><b>05</b><p>Make order status easy to find so people are not left wondering what happens next.</p></div></div></section>
+<section class="fc-section" id="process"><div class="fc-eyebrow">04 / Design process</div><h2>From understanding the problem to shaping the <em>experience.</em></h2><p class="fc-intro">A focused four-part process helped turn research findings into a clear, testable product experience.</p><div class="fc-process"><article class="fc-phase"><span>PHASE 01</span><h3>Discover</h3><p>Reviewed competitor experiences and interviewed users to identify patterns, needs and friction points.</p></article><article class="fc-phase"><span>PHASE 02</span><h3>Define</h3><p>Organised the information architecture and mapped the browse, order and tracking journeys.</p></article><article class="fc-phase"><span>PHASE 03</span><h3>Design</h3><p>Created wireframes, established reusable UI components and developed high-fidelity screens in Figma.</p></article><article class="fc-phase"><span>PHASE 04</span><h3>Validate</h3><p>Used interactive prototypes and usability feedback to refine the checkout and item-customisation flows.</p></article></div><h3 style="margin-top:38px">My contribution</h3><div class="fc-responsibilities"><span>UX research</span><span>Competitor analysis</span><span>Information architecture</span><span>User flows</span><span>Wireframing</span><span>UI design</span><span>Prototyping</span><span>Design system</span><span>Usability iteration</span></div></section>
+<section class="fc-section" id="solution"><div class="fc-eyebrow">05 / The experience</div><h2>Three moments. One connected <em>journey.</em></h2><p class="fc-intro">The interface was shaped around a simple sequence: discover something appealing, make it yours, then place the order with confidence.</p><div class="fc-principles"><article class="fc-principle"><span class="n">01 / FIND</span><h3>Make discovery effortless</h3><p>Prominent search, clear categories, nearby restaurants and popular menu items help people get started quickly.</p></article><article class="fc-principle"><span class="n">02 / PERSONALISE</span><h3>Keep choices manageable</h3><p>Present item details and customisation in a more focused way, so each decision feels clear.</p></article><article class="fc-principle"><span class="n">03 / COMPLETE</span><h3>Make checkout feel certain</h3><p>Bring selected items, quantities, delivery charges and totals together for an easier final review.</p></article></div>
+<div class="fc-image-feature"><img src="Home__5_.jpg" alt="Food Cafe home screen showing search, offers, nearby restaurants and popular menu" loading="lazy"><div class="fc-image-caption"><strong>01 — Home &amp; discovery</strong><span>Search · Offers · Nearby restaurants · Popular menu</span></div></div>
+<div class="fc-image-feature"><img src="Slice_17.jpg" alt="Annotated Food Cafe UI showing home discovery and order details screens" loading="lazy"><div class="fc-image-caption"><strong>02 — Interface decisions</strong><span>Feature annotations · Order details · Cart summary</span></div></div>
+<div class="fc-image-feature"><img src="Slice_11.jpg" alt="Food Cafe mobile app screen collection covering onboarding, ordering, chat and tracking" loading="lazy"><div class="fc-image-caption"><strong>03 — The wider product</strong><span>Onboarding · Profile · Restaurant · Chat · Tracking</span></div></div></section>
+<section class="fc-section" id="system"><div class="fc-eyebrow">06 / Design system</div><h2>A consistent visual language, built to <em>scale.</em></h2><p>The design system brings the experience together through reusable components and shared visual rules. Colour, typography, spacing, elevation and interaction states help maintain consistency as new screens and features are added.</p><div class="fc-design-system"><div><h3>One system.<br>Many touchpoints.</h3><p>A component-led foundation for a coherent experience across the app — from the first search to the final order confirmation.</p><div class="fc-token-list"><span>Colour tokens</span><span>Typography</span><span>Spacing</span><span>Components</span><span>States</span></div></div><div class="fc-palette" aria-label="Food Cafe colour palette"><i></i><i></i><i></i><i></i><i></i></div></div></section>
+<section class="fc-section" id="outcome"><div class="fc-eyebrow">07 / Outcome &amp; reflection</div><h2>A clearer journey — and a foundation for <em>what's next.</em></h2><p>The project brought the core ordering experience into a more connected flow, with clearer discovery, more focused customisation and a checkout that makes order details easier to review.</p><div class="fc-results"><div class="fc-results-head"><h3>Project-reported outcomes</h3><span>As recorded in the original case study</span></div><div class="fc-result-grid"><div class="fc-result"><strong>40%</strong><span>Reduction in task-completion time reported from usability testing.</span></div><div class="fc-result"><strong>4.6/5</strong><span>Average satisfaction score reported across tested user sessions.</span></div><div class="fc-result"><strong>100%</strong><span>Design goals marked as met in the original project summary.</span></div></div><p class="fc-result-note">Note: These figures are retained from the original project content. Before publishing, ensure the underlying test records and measurement method are available to substantiate them.</p></div>
+<h3 style="margin-top:42px">Where the product could go next</h3><div class="fc-audience"><div class="fc-audience-card"><span>01 / PERSONALISATION</span><p>Smarter recommendations, favourites and one-tap reordering.</p></div><div class="fc-audience-card"><span>02 / LOYALTY</span><p>Rewards and tailored offers that encourage repeat orders.</p></div><div class="fc-audience-card"><span>03 / CONFIDENCE</span><p>Live courier tracking, reviews and richer order updates.</p></div></div><div class="fc-note"><div class="fc-note-mark">✳</div><p><strong>What I took away</strong><br>A strong ordering experience is not about adding more features. It is about helping people make the next decision with less effort — and keeping that clarity consistent from screen to screen.</p></div></section>
+<a class="fc-next" href="index.html#work"><div><span>Continue exploring</span><strong>Back to selected work</strong></div><div class="arrow">↗</div></a>
+</div></section>
+<section class="section section--tight"><div class="container"><div class="cta-banner fc-cta" data-reveal><div class="inner"><p class="eyebrow" style="color:#ffe0d8"><span class="dot"></span>Have a product challenge?</p><h2>Let's make the next experience feel effortless.</h2><p>I take on a small number of projects at a time, so every one gets full attention. Tell me what you're building.</p><div class="cta-actions"><a class="btn btn-on-dark magnetic" href="mailto:pasindu.uiux@gmail.com">Start a conversation ↗</a><a class="cta-email" href="mailto:pasindu.uiux@gmail.com">pasindu.uiux@gmail.com</a></div></div></div></div></section>
 </main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo" href="index.html"><span class="dot"></span>Pasindu&nbsp;Madhushanka</a>
-        <p>Product &amp; UX design, built with intention.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4>Quick links</h4>
-          <a href="index.html#work">Work</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Colombo, Sri Lanka</p>
-          <a href="mailto:pasindu@uxerblend.com">pasindu@uxerblend.com</a>
-          <a href="tel:+94757676542">+94 75 767 6542</a>
-        </div>
-        <div class="footer-col">
-          <h4>Follow</h4>
-          <div class="social-row">
-            <a href="https://dribbble.com/PasinduDM" aria-label="Dribbble" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M4 9.5c2.8 1 8 1.4 16 .5M3.5 15c5-1.4 11.5-1.6 17 1M9 3.5c2.6 4 4.2 9.5 4.5 17"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5a2 2 0 0 1 4 0V17m0 0v-4.5"/></svg>
-            </a>
-            <a href="https://www.instagram.com/pasindu_uiux/" aria-label="Instagram" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Pasindu Madhushanka. All rights reserved.</span>
-      <span>Designed &amp; coded by hand — no template.</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating services dock -->
-<nav class="float-nav" aria-label="Services">
-    <a class="float-cta" href="digital-marketing.html">Digital Marketing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-    <a class="float-cta" href="branding.html">Branding<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-</nav>
-
+<footer class="footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="logo" href="index.html">Pasindu&nbsp;Madhushanka</a><p>Product &amp; UX design, built with intention.</p></div><div class="footer-cols"><div class="footer-col"><h4>Quick links</h4><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div><div class="footer-col"><h4>Contact</h4><p>Colombo, Sri Lanka</p><a href="mailto:pasindu.uiux@gmail.com">pasindu.uiux@gmail.com</a><a href="tel:+94757676542">+94 75 767 6542</a></div><div class="footer-col"><h4>Follow</h4><div class="social-row"><a href="https://dribbble.com/PasinduDM" aria-label="Dribbble" target="_blank" rel="noopener">Dr</a><a href="https://www.linkedin.com/in/pasindu-uiux/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a><a href="https://www.instagram.com/pasindu_uiux/" aria-label="Instagram" target="_blank" rel="noopener">Ig</a></div></div></div></div><div class="footer-bottom"><span>© 2026 Pasindu Madhushanka. All rights reserved.</span><span>Designed &amp; coded by hand — no template.</span></div></div></footer>
+<nav class="float-nav" aria-label="Services"><a class="float-cta" href="digital-marketing.html">Digital Marketing ↗</a><a class="float-cta" href="branding.html">Branding ↗</a></nav>
 <script src="script.js"></script>
-</body>
-</html>
+<script>
+// Active section indicator for the editorial case-study index
+(() => { const links=[...document.querySelectorAll('.fc-side nav a')]; const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean); if(!('IntersectionObserver' in window)) return; const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}})},{rootMargin:'-25% 0px -65% 0px'}); sections.forEach(s=>io.observe(s)); })();
+</script>
+</body></html>
